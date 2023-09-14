@@ -1,0 +1,24 @@
+.mobile {
+    &__menu-list {
+        list-style-type: none;
+        font-size: 16px;
+        padding: 20px;
+        display: none;
+    }
+    &__menu-list.show {
+        display: block;
+    }
+    &__menu-list-item a {
+        text-decoration: none;
+        color: black;
+        line-height: 1.8;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    &__menu-list-item a:link {
+        padding-right: 250px;
+    }
+    &__menu-list-item a:hover {
+        text-decoration: underline;
+    }
+}

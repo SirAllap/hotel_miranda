@@ -1,2 +1,10 @@
 // Base & Layout
-@import "./layout/base";
+@import "./layout/header/header";
+@import "./layout/header/dropDownMobile";
+
+//  Utils
+@import "./utils/base";
+
+// Pages
+//? Home
+@import "./pages/home/home";

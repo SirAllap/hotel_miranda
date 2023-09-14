@@ -1,0 +1,67 @@
+//! icons
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 300,
+        "GRAD" 20,
+        "opsz" 25;
+}
+.header {
+    position: sticky;
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(139, 139, 139, 0.25);
+    &__mobile-left-items {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 50vw;
+    }
+    &__mobile-burger-icon {
+        display: block;
+        cursor: pointer;
+    }
+    &__mobile-burger-icon.hide {
+        display: none;
+    }
+    &__mobile-close-icon {
+        display: none;
+    }
+    &__mobile-close-icon.show {
+        display: block;
+        cursor: pointer;
+    }
+    &__mobile-icons-left div {
+        font-size: 30px;
+    }
+    &__logo-image {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 30px;
+    }
+    &__logo-image-h {
+        height: 50px;
+        box-shadow: 0px 14px 24px rgba(139, 139, 139, 0.25);
+    }
+    &__logo-image-words {
+        margin-left: 20px;
+        height: 25px;
+    }
+    &__mobile-icons-right div {
+        font-size: 30px;
+    }
+    &__mobile-icons-right {
+        width: 50vw;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        font-size: 30px;
+    }
+    &__mobile-search-icon {
+        margin-left: 20px;
+    }
+}
