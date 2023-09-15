@@ -57,9 +57,7 @@
         <li class="mobile__menu-list-item">
           <a href="./aboutUs.html">About Us</a>
         </li>
-        <li class="mobile__menu-list-item">
-          <a href="./rooms.html">Rooms</a>
-        </li>
+        <li class="mobile__menu-list-item"><a href="./rooms.html">Rooms</a></li>
         <li class="mobile__menu-list-item">
           <a href="./offers.html">Offers</a>
         </li>
@@ -68,6 +66,41 @@
         </li>
       </ul>
     </section>
+    <main class="home-intro">
+      <div class="home-intro__text">
+        <section class="home-intro__text-section">
+          <h5>THE ULTIMATE LUXURY EXPERIENCE</h5>
+          <h1>The Perfect Base For You</h1>
+        </section>
+        <section class="home-intro__button-section">
+          <button class="home-intro__button button-beish">TAKE A TOUR</button>
+          <button class="home-intro__button button-grey">LEARN MORE</button>
+        </section>
+      </div>
+      <div class="home-intro__calendar-picker">
+        <label for="arrival">Arrival date:</label>
+        <input
+          type="date"
+          id="arrival"
+          name="trip-start"
+          value="2020-03-24"
+          min="2023-08-01"
+          max="2025-01-01"
+        />
+        <label for="departure">LeDeparture date:</label>
+        <input
+          type="date"
+          id="departure"
+          name="trip-end"
+          value="2020-03-30"
+          min="2023-08-01"
+          max="2025-01-01"
+        />
+        <button class="home-intro__calendar-picker-button button-beish-auto">
+          CHECK AVAILABILITY
+        </button>
+      </div>
+    </main>
   </body>
   <script src="index.js"></script>
 </html>

@@ -7,13 +7,16 @@
         "opsz" 25;
 }
 .header {
+    z-index: 10;
     position: sticky;
+    top: 0;
+    background-color: $color-white;
     height: 100px;
     width: 100vw;
     display: flex;
     flex-direction: row;
     padding: 20px;
-    box-shadow: 0px 5px 10px rgba(139, 139, 139, 0.25);
+    box-shadow: 0px 5px 10px rgba(7, 7, 7, 0.25);
     &__mobile-left-items {
         display: flex;
         flex-direction: row;

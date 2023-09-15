@@ -1,10 +1,13 @@
+//  Utils
+@import "./utils/base";
+@import "./utils/variables";
+
 // Base & Layout
 @import "./layout/header/header";
 @import "./layout/header/dropDownMobile";
 
-//  Utils
-@import "./utils/base";
+// Components
+@import "./components/buttons/buttons";
 
 // Pages
-//? Home
-@import "./pages/home/home";
+@import "./pages/home/home-intro";
