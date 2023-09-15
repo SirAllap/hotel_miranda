@@ -22,7 +22,7 @@ body {
 
 .header {
   z-index: 10;
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: #ffffff;
   height: 100px;
@@ -69,14 +69,14 @@ body {
   margin-left: 20px;
   height: 25px;
 }
-.header__mobile-icons-right div {
-  font-size: 30px;
-}
 .header__mobile-icons-right {
   width: 50vw;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  font-size: 30px;
+}
+.header__mobile-icons-right div {
   font-size: 30px;
 }
 .header__mobile-search-icon {
@@ -138,7 +138,7 @@ body {
   line-height: 15.23px;
   display: block;
   width: 216px;
-  height: 60px;
+  min-height: 60px;
   border: 0;
 }
 
@@ -152,7 +152,7 @@ body {
   line-height: 15.23px;
   display: block;
   width: fit-content;
-  height: 60px;
+  min-height: 60px;
   border: 0;
 }
 
@@ -166,10 +166,38 @@ body {
   line-height: 15.23px;
   display: block;
   width: 216px;
-  height: 60px;
+  min-height: 60px;
   border: 2px rgba(255, 255, 255, 0.33) solid;
 }
 
+.subtitle-trigger {
+  color: #686868;
+  font-family: "Archivo";
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  line-height: 18px;
+}
+
+.big-title {
+  font-family: "Old Standard TT";
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+  font-weight: 400;
+}
+
+.filled-text {
+  font-family: "Roboto";
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.home-intro {
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
 .home-intro__text {
   background-color: #333333;
   height: 530px;
@@ -182,22 +210,12 @@ body {
   margin-left: 20px;
   padding-top: 80px;
   margin-bottom: 15px;
-  height: 250px;
-}
-.home-intro__text-section h1 {
-  font-family: "Old Standard TT";
-  font-size: 56px;
-  line-height: 60px;
-  letter-spacing: -1.2px;
-  font-weight: 400;
+  height: 280px;
 }
 .home-intro__text-section h5 {
-  font-family: "Archivo";
   font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 2.8px;
-  line-height: 18px;
   width: 240px;
+  margin-bottom: 50px;
 }
 .home-intro__button-section {
   display: flex;
@@ -246,4 +264,86 @@ body {
 }
 .home-intro__calendar-picker-button {
   padding: 0 25px 0 25px;
+}
+
+.home-about__text-button {
+  background-color: #f9f9f9;
+  height: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.home-about__text-button h4 {
+  margin: 20px 0 20px 0;
+}
+.home-about__text-button h1 {
+  margin: 20px 0 0 0;
+}
+.home-about__text-button p {
+  color: #686868;
+  font-family: "Archivo";
+  font-size: 14px;
+  line-height: 24px;
+  margin: 20px 0 30px 0;
+}
+.home-about__card {
+  margin-top: 40px;
+  height: 600px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  margin: 0 60px 0 60px;
+}
+.home-about__card.topcard {
+  position: relative;
+  bottom: 120px;
+}
+.home-about__card-img {
+  height: 50%;
+  background-color: #686868;
+}
+.home-about__card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-about__card-info {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home-about__card-info img {
+  margin-top: 40px;
+  height: 120px;
+  position: relative;
+  left: 17%;
+  right: 50%;
+}
+.home-about__card-info h1 {
+  position: relative;
+  top: -50px;
+  font-size: 36px;
+}
+.home-about__card-info h4 {
+  position: relative;
+  top: -50px;
+  width: 200px;
+  text-align: center;
+  line-height: 24px;
+}
+.home-about__card-info.variation {
+  background-color: #111111;
+}
+.home-about__card-info.variation img {
+  height: 70px;
+  position: initial;
+}
+.home-about__card-info.variation h1 {
+  color: #ffffff;
+  position: initial;
+}
+.home-about__card-info.variation h4 {
+  color: #ffffff;
+  position: initial;
 }

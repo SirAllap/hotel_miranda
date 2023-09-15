@@ -1,0 +1,22 @@
+.subtitle-trigger {
+    color: $color-ligthGrayDisable;
+    font-family: $arch-font;
+    font-size: $small-font;
+    font-weight: $strong-weight;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+}
+.big-title {
+    font-family: $old-font;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    font-weight: $soft-weight;
+}
+
+.filled-text {
+    font-family: $robo-font;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: $soft-weight;
+}

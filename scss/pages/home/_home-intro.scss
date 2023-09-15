@@ -1,4 +1,6 @@
 .home-intro {
+    margin-top: 100px;
+    margin-bottom: 60px;
     &__text {
         background-color: $color-midStrongGreyBack;
         height: 530px;
@@ -11,22 +13,12 @@
         margin-left: 20px;
         padding-top: 80px;
         margin-bottom: 15px;
-        height: 250px;
-    }
-    &__text-section h1 {
-        font-family: $old-font;
-        font-size: 56px;
-        line-height: 60px;
-        letter-spacing: -1.2px;
-        font-weight: $soft-weight;
-    }
-    &__text-section h5 {
-        font-family: $arch-font;
-        font-weight: $soft-weight;
-        font-size: $small-font;
-        letter-spacing: 2.8px;
-        line-height: 18px;
-        width: 240px;
+        height: 280px;
+        h5 {
+            font-weight: $soft-weight;
+            width: 240px;
+            margin-bottom: 50px;
+        }
     }
     &__button-section {
         display: flex;
@@ -42,11 +34,11 @@
         background-color: $color-strongGreyBack;
         height: 354px;
         padding: 20px;
-    }
-    &__calendar-picker label {
-        font-family: $robo-font;
-        color: $color-white;
-        font-size: $smallPlus-font;
+        label {
+            font-family: $robo-font;
+            color: $color-white;
+            font-size: $smallPlus-font;
+        }
     }
     &__calendar-picker input[type="date"] {
         display: block;
