@@ -13,10 +13,30 @@
     letter-spacing: -1.2px;
     font-weight: $soft-weight;
 }
-
+.regular-title {
+    font-family: $old-font;
+    font-size: 36px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    font-weight: $soft-weight;
+}
 .filled-text {
     font-family: $robo-font;
     font-size: 15px;
     line-height: 22px;
+    font-weight: $soft-weight;
+}
+.price-amount {
+    color: $color-beish;
+    font-family: $arch-font;
+    font-size: 45px;
+    line-height: 43px;
+    font-weight: $strong-weight;
+}
+.price-nigth {
+    color: $color-beish;
+    font-family: $arch-font;
+    font-size: 23px;
+    line-height: 43px;
     font-weight: $soft-weight;
 }

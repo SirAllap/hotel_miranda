@@ -187,10 +187,34 @@ body {
   font-weight: 400;
 }
 
+.regular-title {
+  font-family: "Old Standard TT";
+  font-size: 36px;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+  font-weight: 400;
+}
+
 .filled-text {
   font-family: "Roboto";
   font-size: 15px;
   line-height: 22px;
+  font-weight: 400;
+}
+
+.price-amount {
+  color: #bead8e;
+  font-family: "Archivo";
+  font-size: 45px;
+  line-height: 43px;
+  font-weight: 700;
+}
+
+.price-nigth {
+  color: #bead8e;
+  font-family: "Archivo";
+  font-size: 23px;
+  line-height: 43px;
   font-weight: 400;
 }
 
@@ -323,7 +347,6 @@ body {
 .home-about__card-info h1 {
   position: relative;
   top: -50px;
-  font-size: 36px;
 }
 .home-about__card-info h4 {
   position: relative;
@@ -356,7 +379,81 @@ body {
   margin-top: 20px;
   text-align: center;
 }
-.home-rooms__services-slider-price img {
-  border: 1px solid red;
-  width: 70%;
+.home-rooms__services-slider-with-price {
+  text-align: center;
+}
+.home-rooms__services-slider-with-price img {
+  width: 100%;
+}
+.home-rooms__services-info {
+  z-index: 5;
+  position: relative;
+  top: 26px;
+  max-width: 290px;
+}
+.home-rooms__slider-info-card {
+  z-index: 5;
+  position: relative;
+  bottom: 26px;
+  margin: auto;
+  padding: 20px 20px 0 20px;
+  background-color: #ffffff;
+  max-width: 90%;
+}
+.home-rooms__slider-info-card h4 {
+  margin-top: 20px;
+}
+.home-rooms__slider-info-card div {
+  margin-top: 20px;
+}
+.home-rooms__intro-video {
+  padding: 20px;
+  background-color: #222222;
+}
+.home-rooms__intro-video-text {
+  color: #ffffff;
+}
+.home-rooms__intro-video-text h1 {
+  margin-top: 25px;
+  width: 85%;
+}
+.home-rooms__intro-video-text :first-child {
+  margin-top: 45px;
+  color: #bead8e;
+}
+.home-rooms__intro-video-text :last-child {
+  margin-top: 25px;
+  text-align: justify;
+  line-height: 24px;
+  color: #c2c2c2;
+}
+.home-rooms__intro-video-video {
+  margin-top: 25px;
+  width: 100%;
+}
+.home-rooms__intro-video-button {
+  margin-top: 30px;
+}
+
+.swiper {
+  --swiper-navigation-size: 10px;
+}
+
+.swiper-button-next {
+  background-color: #bead8e;
+  right: 10px;
+  padding: 20px;
+  color: #fff !important;
+  fill: #fff !important;
+  stroke: #fff !important;
+  max-width: 10px;
+}
+
+.swiper-button-prev {
+  background-color: rgb(255, 255, 255);
+  right: 10px;
+  padding: 20px;
+  color: #000 !important;
+  fill: black !important;
+  stroke: black !important;
 }

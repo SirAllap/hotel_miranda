@@ -9,10 +9,101 @@
             text-align: center;
         }
     }
-    &__services-slider-price {
+    &__services-slider-with-price {
+        text-align: center;
         img {
-            border: 1px solid red;
-            width: 70%;
+            width: 100%;
         }
     }
+    &__services-info {
+        z-index: 5;
+        position: relative;
+        top: 26px;
+        max-width: 290px;
+    }
+    &__slider-info-card {
+        z-index: 5;
+        position: relative;
+        bottom: 26px;
+        margin: auto;
+        padding: 20px 20px 0 20px;
+        background-color: $color-white;
+        max-width: 90%;
+        h4 {
+            margin-top: 20px;
+        }
+        div {
+            margin-top: 20px;
+        }
+    }
+    &__intro-video {
+        padding: 20px;
+        background-color: $color-strongerGreyBack;
+    }
+    &__intro-video-text {
+        color: $color-white;
+        h1 {
+            margin-top: 25px;
+            width: 85%;
+        }
+    }
+    &__intro-video-text :first-child {
+        margin-top: 45px;
+        color: $color-beish;
+    }
+    &__intro-video-text :last-child {
+        margin-top: 25px;
+        text-align: justify;
+        line-height: 24px;
+        color: $color-verySoftGrey;
+    }
+    &__intro-video-video {
+        margin-top: 25px;
+        width: 100%;
+    }
+    &__intro-video-button {
+        margin-top: 30px;
+    }
 }
+
+.swiper {
+    --swiper-navigation-size: 10px;
+}
+.swiper-button-next {
+    background-color: $color-beish;
+    right: 10px;
+    padding: 20px;
+    color: #fff !important;
+    fill: #fff !important;
+    stroke: #fff !important;
+    max-width: 10px;
+}
+.swiper-button-prev {
+    background-color: rgb(255, 255, 255);
+    right: 10px;
+    padding: 20px;
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
+}
+
+// .swiper {
+//     --swiper-theme-color: #007aff;
+
+//     --swiper-navigation-size: 44px;
+//     --swiper-navigation-color: var(--swiper-theme-color);
+
+//     --swiper-pagination-color: var(--swiper-theme-color);
+//     --swiper-pagination-bullet-horizontal-gap: 4px;
+//     --swiper-pagination-bullet-vertical-gap: 6px;
+//     --swiper-pagination-bullet-size: 8px;
+//     --swiper-pagination-bullet-width: 8px;
+//     --swiper-pagination-bullet-height: 8px;
+//     --swiper-pagination-bullet-opacity: 1;
+//     --swiper-pagination-bullet-inactive-color: black;
+//     --swiper-pagination-bullet-inactive-opacity: .2;
+//     --swiper-pagination-bullet-horizontal-gap: 4px;
+
+//     --swiper-preloader-color: var(--swiper-theme-color);
+//     --swiper-virtual-size: 80px;
+// }

@@ -1,3 +1,5 @@
+
+
 const icon_burger = document.querySelector('.header__mobile-burger-icon')
 const icon_close = document.querySelector('.header__mobile-close-icon')
 const drop_down = document.querySelector('.mobile__menu-list')
@@ -15,3 +17,14 @@ document.addEventListener('click', (event) => {
     }
 })
 
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})

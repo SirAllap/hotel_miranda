@@ -9,6 +9,10 @@
     />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="shortcut icon" href="./favico.ico" type="image/icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <title>Home</title>
   </head>
   <body>
@@ -128,7 +132,7 @@
             src="./assets/images/strong_team.png"
             alt="a logo of a strong team"
           />
-          <h1 class="home-about__card-text big-title">Strong Team</h1>
+          <h1 class="home-about__card-text regular-title">Strong Team</h1>
           <h4 class="home-about__card-text filled-text">
             Relax in luxurious comfort, where every need is met with a smile.
           </h4>
@@ -146,7 +150,7 @@
             src="./assets/images/luxury_date_picker.png"
             alt="a logo of a strong team"
           />
-          <h1 class="home-about__card-text big-title">Luxury Room</h1>
+          <h1 class="home-about__card-text regular-title">Luxury Room</h1>
           <h4 class="home-about__card-text filled-text">
             Relax in luxurious comfort, where every need is met with a smile.
           </h4>
@@ -158,23 +162,103 @@
         <h4 class="home-rooms__text subtitle-trigger">ROOMS</h4>
         <h1 class="home-roooms__text big-title">Hand Picked Rooms</h1>
       </div>
-      <div class="home-rooms__services-slider-price">
+      <div class="home-rooms__services-slider-with-price">
         <img
           class="home-rooms__services-info"
           src="./assets/images/miranda_services_info.png"
           alt="a serie of icons representing room services"
         />
-        <div class="home-rooms__slider"><img src="" alt="" /></div>
-        <div class="home-rooms__slider-info-card">
-          <h1 class="home-rooms__info-card-title">Minimal Duplex Room</h1>
-          <h4>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
-          </h4>
-          <span>$345/Night</span>
+        <div class="home-rooms__slider swiper">
+          <div class="swiper-wrapper">
+            <img
+              class="swiper-slide"
+              src="/assets/images/rooms/room1.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="/assets/images/rooms/room2.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="/assets/images/rooms/room3.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="/assets/images/rooms/room4.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="/assets/images/rooms/room9.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="/assets/images/rooms/room6.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="/assets/images/rooms/room7.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="/assets/images/rooms/room8.jpg"
+              alt=""
+            />
+          </div>
+          <div class="home-rooms__slider-button-prev swiper-button-prev"></div>
+          <div class="home-rooms__slider-button-next swiper-button-next"></div>
         </div>
+        <div class="home-rooms__slider-info-card">
+          <h1 class="home-rooms__info-card-title regular-title">
+            Minimal Duplex Room
+          </h1>
+          <h4 class="home-rooms__info-card-body filled-text">
+            Experience the epitome of elegance and comfort in our lavish hotel
+            suites, adorned with exquisite furnishings and stunning vistas.
+          </h4>
+          <div class="home-rooms__info-card-price-amount-nigth">
+            <span class="home-rooms__info-card-price price-amount">$345</span
+            ><span class="home-rooms__info-card-price price-nigth">/Night</span>
+          </div>
+        </div>
+      </div>
+      <div class="home-rooms__intro-video">
+        <section class="home-rooms__intro-video-text">
+          <h4 class="home-rooms__text subtitle-trigger">INTRO VIDEO</h4>
+          <h1 class="home-rooms__text big-title">
+            Meet With Our Luxury Place.
+          </h1>
+          <h4 class="home-rooms__text filled-text">
+            Experience unmatched luxury at our hotel, where impeccable service
+            meets opulent accommodations. From lavish suites to exquisite
+            dining, we redefine elegance, ensuring an unforgettable stay.
+          </h4>
+        </section>
+        <section class="home-rooms__intro-video-video">
+          <div class="plyr__video-embed" id="player">
+            <iframe
+              width="100%"
+              height="300"
+              src="https://www.youtube-nocookie.com/embed/Bu3Doe45lcU?si=1rHPncx6fmoXVYtz&amp;controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <button class="home-rooms__intro-video-button button-beish">
+            BOOK NOW
+          </button>
+        </section>
       </div>
     </main>
   </body>
-  <script src="index.js"></script>
+  <script type="module" src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </html>
