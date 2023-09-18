@@ -1,0 +1,18 @@
+.home-rooms {
+    &__text-container {
+        h4 {
+            margin-top: 60px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+    &__services-slider-price {
+        img {
+            border: 1px solid red;
+            width: 70%;
+        }
+    }
+}

@@ -14,3 +14,4 @@ document.addEventListener('click', (event) => {
         drop_down.classList.remove('show')
     }
 })
+
