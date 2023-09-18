@@ -304,6 +304,30 @@ body {
   background-position-x: 210px;
 }
 
+.menu-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-item-text {
+  padding: 10px 20px 10px 20px;
+  margin: auto;
+}
+.menu-item-text h4 {
+  margin: 0 0 10px 0;
+  font-family: "Old Standard TT";
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.72px;
+  font-weight: 400;
+}
+.menu-item-text p {
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 24px;
+  text-align: justify;
+}
+
 .home-intro {
   margin-top: 100px;
   margin-bottom: 60px;
@@ -524,9 +548,92 @@ body {
   margin-top: 30px;
 }
 
+.home-facilities {
+  margin-bottom: 60px;
+}
 .home-facilities__text-container {
   text-align: center;
 }
 .home-facilities__text-container h4 {
   margin-bottom: 20px;
+}
+
+.home-menu {
+  overflow: clip;
+  padding: 20px;
+}
+.home-menu__food-items img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.home-menu__donut-img {
+  width: 120px;
+  height: 120px;
+  margin-left: 100%;
+  float: right;
+  margin-right: -50px;
+}
+.home-menu__icon-text h1 {
+  margin-top: 20px;
+}
+.home-menu__food-menu-slider {
+  margin-top: 20px;
+  height: 470px;
+}
+.home-menu__food-item {
+  margin-bottom: 15px;
+}
+.home-menu__restaurant-photos {
+  width: 100%;
+  max-height: 330px;
+}
+.home-menu__restaurant-photos img {
+  object-fit: cover;
+  padding-bottom: 80px;
+}
+.home-menu__acheivements {
+  background-color: #222222;
+  color: #999999;
+  text-align: center;
+  padding: 30px;
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 21.82px;
+  font-weight: 700;
+}
+.home-menu__acheivements img {
+  width: 180px;
+}
+.home-menu__acheivements-item {
+  margin-bottom: 50px;
+}
+.home-menu__acheivements :last-child {
+  margin-bottom: 10px;
+}
+
+.swiper-button-prev {
+  background-color: #f8f8f8;
+  position: relative !important;
+  top: -50px !important;
+  left: -110px !important;
+  float: right;
+  width: 20px !important;
+  height: 20px !important;
+  z-index: 10;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next {
+  position: relative !important;
+  top: -50px !important;
+  float: right;
+  width: 20px !important;
+  height: 20px !important;
+  z-index: 10;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }

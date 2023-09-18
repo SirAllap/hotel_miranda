@@ -1,0 +1,80 @@
+.home-menu {
+    overflow: clip;
+    padding: 20px;
+    &__food-items img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+    }
+    &__donut-img {
+        width: 120px;
+        height: 120px;
+        margin-left: 100%;
+        float: right;
+        margin-right: -50px;
+    }
+    &__icon-text {
+        h1 {
+            margin-top: 20px;
+        }
+    }
+    &__food-menu-slider {
+        margin-top: 20px;
+        height: 470px;
+    }
+    &__food-item {
+        margin-bottom: 15px;
+    }
+    &__restaurant-photos {
+        width: 100%;
+        max-height: 330px;
+    }
+    &__restaurant-photos img {
+        object-fit: cover;
+        padding-bottom: 80px;
+    }
+    &__acheivements {
+        background-color: $color-strongerGreyBack;
+        color: $color-softGreyText1;
+        text-align: center;
+        padding: 30px;
+        font-family: $robo-font;
+        font-size: 16px;
+        line-height: 21.82px;
+        font-weight: $strong-weight;
+    }
+    &__acheivements img {
+        width: 180px;
+    }
+    &__acheivements-item {
+        margin-bottom: 50px;
+    }
+    &__acheivements :last-child {
+        margin-bottom: 10px;
+    }
+}
+
+.swiper-button-prev {
+    background-color: #f8f8f8;
+    position: relative !important;
+    top: -50px !important;
+    left: -110px !important;
+    float: right;
+    width: 20px !important;
+    height: 20px !important;
+    z-index: 10;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-button-next {
+    position: relative !important;
+    top: -50px !important;
+    float: right;
+    width: 20px !important;
+    height: 20px !important;
+    z-index: 10;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}

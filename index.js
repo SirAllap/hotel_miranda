@@ -17,15 +17,40 @@ document.addEventListener('click', (event) => {
     }
 })
 
-const swiper = new Swiper('.swiper', {
+const swiperRooms = new Swiper('.swiper-rooms', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+})
+const swiperFeatures = new Swiper('.swiper-features', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    // Pagination dots
+    pagination: {
+        el: ".swiper-pagination",
+    },
+})
+const swiperFoodMenu = new Swiper('.swiper-food-menu', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+})
+const swiperRestaurantPhotos = new Swiper('.swiper-restaurant-photos', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    // Pagination dots
     pagination: {
         el: ".swiper-pagination",
     },
