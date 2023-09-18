@@ -9,8 +9,11 @@
 // Components
 @import "./components/buttons/buttons";
 @import "./components/text/text";
+@import "./components/swiper/swiper";
+@import "./components/featureCard/featureCard";
 
 // Pages
 @import "./pages/home/home-intro";
 @import "./pages/home/home-about";
 @import "./pages/home/home-rooms";
+@import "./pages/home/home-facilities";

@@ -218,6 +218,92 @@ body {
   font-weight: 400;
 }
 
+.swiper {
+  --swiper-navigation-size: 10px;
+  --swiper-pagination-color: #bead8e;
+}
+
+.swiper-button-next {
+  background-color: #bead8e;
+  right: 10px;
+  padding: 20px;
+  color: #fff !important;
+  fill: #fff !important;
+  stroke: #fff !important;
+  max-width: 10px;
+}
+
+.swiper-button-prev {
+  background-color: rgb(255, 255, 255);
+  right: 10px;
+  padding: 20px;
+  color: #000 !important;
+  fill: black !important;
+  stroke: black !important;
+}
+
+.general-features-card {
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.general-features-card__features-left-img {
+  margin-top: 60px;
+}
+.general-features-card__features-card-text {
+  width: 80%;
+}
+.general-features-card__features-card-text h4 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+.general-features-card__features-card-text p {
+  margin-top: 10px;
+  color: #777777;
+}
+
+.rating {
+  background: url("../../../assets/images/features/bg_numbers/01.png"), #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 20px;
+  background-position-x: 210px;
+}
+
+.clock {
+  background: url("../../../assets/images/features/bg_numbers/02.png"), #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 20px;
+  background-position-x: 210px;
+}
+
+.pointer {
+  background: url("../../../assets/images/features/bg_numbers/03.png"), #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 20px;
+  background-position-x: 210px;
+}
+
+.clock-stop {
+  background: url("../../../assets/images/features/bg_numbers/04.png"), #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 20px;
+  background-position-x: 210px;
+}
+
+.credit-card {
+  background: url("../../../assets/images/features/bg_numbers/05.png"), #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 20px;
+  background-position-x: 210px;
+}
+
+.award {
+  background: url("../../../assets/images/features/bg_numbers/06.png"), #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 20px;
+  background-position-x: 210px;
+}
+
 .home-intro {
   margin-top: 100px;
   margin-bottom: 60px;
@@ -371,6 +457,9 @@ body {
   position: initial;
 }
 
+.home-rooms {
+  margin-bottom: 60px;
+}
 .home-rooms__text-container h4 {
   margin-top: 60px;
   text-align: center;
@@ -435,25 +524,9 @@ body {
   margin-top: 30px;
 }
 
-.swiper {
-  --swiper-navigation-size: 10px;
+.home-facilities__text-container {
+  text-align: center;
 }
-
-.swiper-button-next {
-  background-color: #bead8e;
-  right: 10px;
-  padding: 20px;
-  color: #fff !important;
-  fill: #fff !important;
-  stroke: #fff !important;
-  max-width: 10px;
-}
-
-.swiper-button-prev {
-  background-color: rgb(255, 255, 255);
-  right: 10px;
-  padding: 20px;
-  color: #000 !important;
-  fill: black !important;
-  stroke: black !important;
+.home-facilities__text-container h4 {
+  margin-bottom: 20px;
 }

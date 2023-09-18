@@ -1,0 +1,56 @@
+.general-features-card {
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    &__features-left-img {
+        margin-top: 60px;
+    }
+    &__features-card-text {
+        width: 80%;
+        h4 {
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        p {
+            margin-top: 10px;
+            color: $color-softGreyText;
+        }
+    }
+}
+
+.rating {
+    background: url("../../../assets/images/features/bg_numbers/01.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    background-position-x: 210px;
+}
+.clock {
+    background: url("../../../assets/images/features/bg_numbers/02.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    background-position-x: 210px;
+}
+.pointer {
+    background: url("../../../assets/images/features/bg_numbers/03.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    background-position-x: 210px;
+}
+.clock-stop {
+    background: url("../../../assets/images/features/bg_numbers/04.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    background-position-x: 210px;
+}
+.credit-card {
+    background: url("../../../assets/images/features/bg_numbers/05.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    background-position-x: 210px;
+}
+.award {
+    background: url("../../../assets/images/features/bg_numbers/06.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    background-position-x: 210px;
+}

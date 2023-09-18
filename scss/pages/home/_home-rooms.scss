@@ -1,4 +1,5 @@
 .home-rooms {
+    margin-bottom: 60px;
     &__text-container {
         h4 {
             margin-top: 60px;
@@ -65,45 +66,3 @@
         margin-top: 30px;
     }
 }
-
-.swiper {
-    --swiper-navigation-size: 10px;
-}
-.swiper-button-next {
-    background-color: $color-beish;
-    right: 10px;
-    padding: 20px;
-    color: #fff !important;
-    fill: #fff !important;
-    stroke: #fff !important;
-    max-width: 10px;
-}
-.swiper-button-prev {
-    background-color: rgb(255, 255, 255);
-    right: 10px;
-    padding: 20px;
-    color: #000 !important;
-    fill: black !important;
-    stroke: black !important;
-}
-
-// .swiper {
-//     --swiper-theme-color: #007aff;
-
-//     --swiper-navigation-size: 44px;
-//     --swiper-navigation-color: var(--swiper-theme-color);
-
-//     --swiper-pagination-color: var(--swiper-theme-color);
-//     --swiper-pagination-bullet-horizontal-gap: 4px;
-//     --swiper-pagination-bullet-vertical-gap: 6px;
-//     --swiper-pagination-bullet-size: 8px;
-//     --swiper-pagination-bullet-width: 8px;
-//     --swiper-pagination-bullet-height: 8px;
-//     --swiper-pagination-bullet-opacity: 1;
-//     --swiper-pagination-bullet-inactive-color: black;
-//     --swiper-pagination-bullet-inactive-opacity: .2;
-//     --swiper-pagination-bullet-horizontal-gap: 4px;
-
-//     --swiper-preloader-color: var(--swiper-theme-color);
-//     --swiper-virtual-size: 80px;
-// }
