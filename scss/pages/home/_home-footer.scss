@@ -1,0 +1,96 @@
+.home-footer {
+    padding: 20px;
+    color: $color-softGreyText;
+    background: url("../../../assets/images/footer_back2.png"), $color-white;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    &__logo {
+        width: 70%;
+    }
+    &__info-text {
+        padding: 30px 0 0 0;
+        font-family: $arch-font;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+    }
+    &__social-links {
+        padding: 30px 0 30px 0;
+    }
+    &__social-links img {
+        width: 40px;
+        height: 40px;
+    }
+    &__services-title {
+        font-family: $old-font;
+        font-size: 28px;
+        font-weight: $soft-weight;
+        line-height: 24px;
+        color: $color-strongerGreyBack;
+        margin: 20px 0 30px 0;
+    }
+    &__services {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    &__services-element {
+        display: block;
+        font-family: $robo-font;
+        font-size: 16px;
+        line-height: 48px;
+    }
+    &__services-colum-left {
+        width: 49vw;
+    }
+    &__services-colum-right {
+        width: 49vw;
+    }
+    &__contact-us-title {
+        font-family: $old-font;
+        font-size: 28px;
+        font-weight: $soft-weight;
+        line-height: 24px;
+        color: $color-strongerGreyBack;
+        margin: 20px 0 40px 0;
+    }
+    &__contact-us-element {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        img {
+            width: 50px;
+            height: fit-content;
+        }
+    }
+    &__contact-us-text-element {
+        padding: 10px 0 10px 20px;
+        h4 {
+            font-family: $old-font;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+        }
+        p {
+            font-family: $robo-font;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 300;
+        }
+    }
+    &__copyright {
+        margin: auto;
+        padding: 15px 0 15px 20px;
+        color: #222222;
+        font-family: $robo-font;
+        font-weight: $strong-weight;
+        font-size: 16px;
+        width: 100%;
+        height: 93px;
+        background-color: #f8f8f8;
+    }
+    &__copyright p {
+        margin-bottom: 20px;
+    }
+}
