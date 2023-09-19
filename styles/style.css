@@ -621,31 +621,12 @@ body {
 .home-menu__acheivements :last-child {
   margin-bottom: 10px;
 }
-
-.swiper-button-prev {
-  background-color: #f8f8f8;
-  position: relative !important;
-  top: -50px !important;
-  left: -110px !important;
-  float: right;
-  width: 20px !important;
-  height: 20px !important;
-  z-index: 10;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+.home-menu__slider-button-prev {
+  top: var(--swiper-navigation-top-offset, 90%) !important;
+  left: var(--swiper-navigation-sides-offset, 70%) !important;
 }
-
-.swiper-button-next {
-  position: relative !important;
-  top: -50px !important;
-  float: right;
-  width: 20px !important;
-  height: 20px !important;
-  z-index: 10;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+.home-menu__slider-button-next {
+  top: var(--swiper-navigation-top-offset, 90%) !important;
 }
 
 .home-footer {
