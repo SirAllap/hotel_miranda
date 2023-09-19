@@ -719,7 +719,7 @@ body {
   margin-top: 25px;
   text-align: justify;
   line-height: 24px;
-  color: #c2c2c2;
+  color: #bdbdbd;
 }
 .home-rooms__intro-video-video {
   margin-top: 25px;
@@ -959,4 +959,97 @@ body {
 
 .rooms-intro {
   margin-top: 100px;
+  margin-bottom: 60px;
 }
+.rooms-intro__head-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #333333;
+  height: 300px;
+  padding: 20px;
+  color: #ffffff;
+}
+.rooms-intro__head-section h1 {
+  margin-top: 20px;
+}
+.rooms-intro__head-section h5 {
+  color: #ffffff;
+  font-weight: 300;
+}
+.rooms-intro__breadcrumbs {
+  position: absolute;
+  right: 15px;
+  top: 360px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 15px 25px;
+  height: auto;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.5px;
+}
+.rooms-intro__breadcrumbs :first-child {
+  font-family: "Archivo";
+}
+.rooms-intro__breadcrumbs :last-child {
+  color: #bead8e;
+}
+
+.rooms-cards {
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 20px;
+}
+.rooms-cards img {
+  width: 100%;
+}
+.rooms-cards__card-service-info img {
+  z-index: 5;
+  position: relative;
+  bottom: 26px;
+  width: 70%;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.rooms-cards__text-container {
+  margin: 0px 20px 40px 20px;
+}
+.rooms-cards p {
+  color: #777777;
+  margin-top: 20px;
+}
+.rooms-cards__text-frist-span {
+  font-size: 16px;
+}
+.rooms-cards__text-second-span {
+  font-size: 16px;
+  font-family: "Archivo";
+  font-weight: 700;
+  color: #bdbdbd;
+}
+
+#pagination-rooms-cards {
+  --swiper-pagination-bullet-border-radius: 0px;
+  --swiper-pagination-bullet-size: 20px;
+  --swiper-pagination-color: #bead8e;
+  --swiper-pagination-bullet-inactive-color: transparent;
+  --swiper-pagination-bullet-horizontal-gap: 5px;
+}
+
+.swiper-pagination-bullet-active {
+  color: white;
+}
+
+/*
+  --swiper-pagination-color: var(--swiper-theme-color);
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+  */

@@ -67,3 +67,20 @@ const swiperFunFact = new Swiper('.swiper-fun-fact', {
         el: ".swiper-pagination-fun",
     },
 })
+const swiperRoomsCards = new Swiper('.swiper-rooms-cards', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    // Pagination dots
+    pagination: {
+        el: ".swiper-pagination-rooms-cards",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>"
+        },
+    },
+    navigation: {
+        nextEl: '.swiper-button-next-rooms-cards',
+        prevEl: '.swiper-button-prev-rooms-cards',
+    },
+})
