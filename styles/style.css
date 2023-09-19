@@ -421,6 +421,70 @@ body {
   background-position-x: 210px;
 }
 
+.general-features-black-card {
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+.general-features-black-card__features-left-img {
+  margin-top: 60px;
+}
+.general-features-black-card__features-card-text {
+  width: 80%;
+}
+.general-features-black-card__features-card-text h4 {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 30px;
+}
+.general-features-black-card__features-card-text p {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.rating-black {
+  background: url("../../../assets/images/features/bg_numbers/01_black.png"), #292929;
+  background-repeat: no-repeat;
+  background-position-y: 5%;
+  background-position-x: 95%;
+}
+
+.clock-black {
+  background: url("../../../assets/images/features/bg_numbers/02_black.png"), #292929;
+  background-repeat: no-repeat;
+  background-position-y: 5%;
+  background-position-x: 95%;
+}
+
+.pointer-black {
+  background: url("../../../assets/images/features/bg_numbers/03_black.png"), #292929;
+  background-repeat: no-repeat;
+  background-position-y: 5%;
+  background-position-x: 95%;
+}
+
+.clock-stop-black {
+  background: url("../../../assets/images/features/bg_numbers/04_black.png"), #292929;
+  background-repeat: no-repeat;
+  background-position-y: 5%;
+  background-position-x: 95%;
+}
+
+.credit-card-black {
+  background: url("../../../assets/images/features/bg_numbers/05_black.png"), #292929;
+  background-repeat: no-repeat;
+  background-position-y: 5%;
+  background-position-x: 95%;
+}
+
+.award-black {
+  background: url("../../../assets/images/features/bg_numbers/06_black.png"), #292929;
+  background-repeat: no-repeat;
+  background-position-y: 5%;
+  background-position-x: 95%;
+}
+
 .menu-item {
   display: flex;
   flex-direction: row;
@@ -703,15 +767,18 @@ body {
   margin-bottom: 15px;
 }
 .home-menu__restaurant-photos {
+  margin: 40px;
   width: 100%;
-  max-height: fit-content;
+  max-height: 400px;
 }
 .home-menu__restaurant-photos img {
   object-fit: cover;
+  width: 100%;
+  height: 400px;
   padding-bottom: 50px;
 }
 .home-menu__acheivements {
-  margin-top: 60px;
+  margin-top: 50px;
   background-color: #222222;
   color: #999999;
   text-align: center;
@@ -817,4 +884,79 @@ body {
 }
 .aboutus-intro__restaurant button {
   margin-top: 20px;
+}
+
+.aboutus-facilities {
+  margin-bottom: 60px;
+  height: 630px;
+  background-color: #222222;
+  color: #fff;
+}
+.aboutus-facilities__text-container {
+  text-align: center;
+}
+.aboutus-facilities__text-container :first-child {
+  font-weight: 400;
+  color: #fff;
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+.aboutus-facilities__swiper {
+  max-width: 350px;
+  width: 90%;
+  max-height: 430px;
+}
+.aboutus-facilities__swiper-pagination {
+  position: relative !important;
+  bottom: -10px !important;
+  --swiper-pagination-color: #bead8e;
+  --swiper-pagination-bullet-inactive-color: #333333;
+  --swiper-pagination-bullet-inactive-opacity: 0.7;
+}
+
+.aboutus-counter {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.aboutus-counter h4 {
+  margin-bottom: 20px;
+}
+.aboutus-counter h1 {
+  margin-bottom: 20px;
+}
+.aboutus-counter__illustration-img {
+  width: 65px;
+  height: 65px;
+}
+.aboutus-counter__arrow-img {
+  width: 30px;
+  height: 15px;
+}
+.aboutus-counter__mini-card {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.aboutus-counter__mini-card span {
+  font-family: "Old Standard TT";
+  font-size: 60px;
+}
+.aboutus-counter__mini-card p {
+  font-family: "Roboto";
+  color: #777777;
+}
+.aboutus-counter__fun-fact img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+.aboutus-counter__pagination {
+  padding: 10px;
+  text-align: center;
+}
+
+.rooms-intro {
+  margin-top: 100px;
 }

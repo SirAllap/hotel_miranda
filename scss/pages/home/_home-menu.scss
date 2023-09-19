@@ -27,15 +27,18 @@
         margin-bottom: 15px;
     }
     &__restaurant-photos {
+        margin: 40px;
         width: 100%;
-        max-height: fit-content;
+        max-height: 400px;
     }
     &__restaurant-photos img {
         object-fit: cover;
+        width: 100%;
+        height: 400px;
         padding-bottom: 50px;
     }
     &__acheivements {
-        margin-top: 60px;
+        margin-top: 50px;
         background-color: $color-strongerGreyBack;
         color: $color-softGreyText1;
         text-align: center;

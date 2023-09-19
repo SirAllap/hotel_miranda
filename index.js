@@ -17,6 +17,7 @@ document.addEventListener('click', (event) => {
     }
 })
 
+
 const swiperRooms = new Swiper('.swiper-rooms', {
     // Optional parameters
     direction: 'horizontal',
@@ -31,6 +32,7 @@ const swiperFeatures = new Swiper('.swiper-features', {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
+    spaceBetween: 40,
     // Pagination dots
     pagination: {
         el: ".swiper-pagination",
@@ -40,6 +42,7 @@ const swiperFoodMenu = new Swiper('.swiper-food-menu', {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
+    spaceBetween: 40,
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -53,5 +56,14 @@ const swiperRestaurantPhotos = new Swiper('.swiper-restaurant-photos', {
     // Pagination dots
     pagination: {
         el: ".swiper-pagination",
+    },
+})
+const swiperFunFact = new Swiper('.swiper-fun-fact', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    // Pagination dots
+    pagination: {
+        el: ".swiper-pagination-fun",
     },
 })

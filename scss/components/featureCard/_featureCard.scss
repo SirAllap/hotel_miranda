@@ -17,7 +17,6 @@
         }
     }
 }
-
 .rating {
     background: url("../../../assets/images/features/bg_numbers/01.png"), $color-white;
     background-repeat: no-repeat;
@@ -53,4 +52,64 @@
     background-repeat: no-repeat;
     background-position-y: 20px;
     background-position-x: 210px;
+}
+
+.general-features-black-card {
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+
+    &__features-left-img {
+        margin-top: 60px;
+    }
+    &__features-card-text {
+        width: 80%;
+        h4 {
+            color: #fff;
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        p {
+            margin-top: 10px;
+            color: #fff;
+        }
+    }
+}
+
+.rating-black {
+    background: url("../../../assets/images/features/bg_numbers/01_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.clock-black {
+    background: url("../../../assets/images/features/bg_numbers/02_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.pointer-black {
+    background: url("../../../assets/images/features/bg_numbers/03_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.clock-stop-black {
+    background: url("../../../assets/images/features/bg_numbers/04_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.credit-card-black {
+    background: url("../../../assets/images/features/bg_numbers/05_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.award-black {
+    background: url("../../../assets/images/features/bg_numbers/06_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
 }
