@@ -5,6 +5,7 @@
 // Base & Layout
 @import "./layout/header/header";
 @import "./layout/header/dropDownMobile";
+@import "./layout/footer/footer";
 
 // Components
 @import "./components/buttons/buttons";
@@ -14,9 +15,11 @@
 @import "./components/foodMenu/foodMenu";
 
 // Pages
+// home
 @import "./pages/home/home-intro";
 @import "./pages/home/home-about";
 @import "./pages/home/home-rooms";
 @import "./pages/home/home-facilities";
 @import "./pages/home/home-menu";
-@import "./pages/home/home-footer";
+// aboutus
+@import "./pages/aboutUs/aboutus-intro";
