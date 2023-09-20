@@ -36,4 +36,127 @@
             color: $color-beish;
         }
     }
+    &__cards {
+        padding: 20px;
+        margin-top: 20px;
+        h4 {
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        p {
+            color: $color-softGreyText;
+            width: 200px;
+        }
+    }
+    &__card1 {
+        background: url("../../../assets/images/contact/01.png"), $color-white;
+        background-repeat: no-repeat;
+        background-position-y: 50%;
+        background-position-x: 80%;
+        height: 236px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin: 0 20px 0 40px;
+        }
+    }
+    &__card2 {
+        background: url("../../../assets/images/contact/02.png"), $color-white;
+        background-repeat: no-repeat;
+        background-position-y: 50%;
+        background-position-x: 80%;
+        height: 236px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin: 0 20px 0 40px;
+        }
+    }
+    &__card3 {
+        background: url("../../../assets/images/contact/03.png"), $color-white;
+        background-repeat: no-repeat;
+        background-position-y: 50%;
+        background-position-x: 80%;
+        height: 236px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin: 0 20px 0 40px;
+        }
+    }
+    &__form {
+        margin-top: 20px;
+        padding: 20px;
+        input {
+            padding: 0 0 0 50px;
+            font-family: $robo-font;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            height: 70px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #f8f8f8;
+        }
+        textarea {
+            padding: 20px 0 0 50px;
+            font-family: $robo-font;
+            font-size: 16px;
+            background: url("../../../assets/images/contact/pen.png"), #f8f8f8;
+            background-repeat: no-repeat;
+            background-size: 17px;
+            background-position-y: 18px;
+            background-position-x: 19px;
+            width: 100%;
+            height: 180px;
+            resize: none;
+            margin-bottom: 30px;
+            border: none;
+        }
+        button {
+            margin: auto;
+            margin-bottom: 50px;
+            width: 265px;
+        }
+    }
+}
+#input-name {
+    background: url("../../../assets/images/contact/user.png"), #f8f8f8;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position-y: 50%;
+    background-position-x: 19px;
+}
+#input-phone {
+    background: url("../../../assets/images/contact/telephon.png"), #f8f8f8;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position-y: 50%;
+    background-position-x: 19px;
+}
+#input-email {
+    background: url("../../../assets/images/contact/email.png"), #f8f8f8;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position-y: 50%;
+    background-position-x: 19px;
+}
+#input-subject {
+    background: url("../../../assets/images/contact/user.png"), #f8f8f8;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position-y: 50%;
+    background-position-x: 19px;
 }

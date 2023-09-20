@@ -335,6 +335,22 @@ body {
   font-weight: 400;
 }
 
+.price-amount-small {
+  color: #bead8e;
+  font-family: "Archivo";
+  font-size: 32px;
+  line-height: 43px;
+  font-weight: 700;
+}
+
+.price-nigth-small {
+  color: #bead8e;
+  font-family: "Archivo";
+  font-size: 13px;
+  line-height: 43px;
+  font-weight: 400;
+}
+
 .swiper {
   --swiper-navigation-size: 10px;
   --swiper-pagination-color: #bead8e;
@@ -1264,4 +1280,223 @@ body {
 }
 .contact-intro__breadcrumbs :last-child {
   color: #bead8e;
+}
+.contact-intro__cards {
+  padding: 20px;
+  margin-top: 20px;
+}
+.contact-intro__cards h4 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.contact-intro__cards p {
+  color: #777777;
+  width: 200px;
+}
+.contact-intro__card1 {
+  background: url("../../../assets/images/contact/01.png"), #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 80%;
+  height: 236px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact-intro__card1 img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin: 0 20px 0 40px;
+}
+.contact-intro__card2 {
+  background: url("../../../assets/images/contact/02.png"), #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 80%;
+  height: 236px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact-intro__card2 img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin: 0 20px 0 40px;
+}
+.contact-intro__card3 {
+  background: url("../../../assets/images/contact/03.png"), #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 80%;
+  height: 236px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact-intro__card3 img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin: 0 20px 0 40px;
+}
+.contact-intro__form {
+  margin-top: 20px;
+  padding: 20px;
+}
+.contact-intro__form input {
+  padding: 0 0 0 50px;
+  font-family: "Roboto";
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #f8f8f8;
+}
+.contact-intro__form textarea {
+  padding: 20px 0 0 50px;
+  font-family: "Roboto";
+  font-size: 16px;
+  background: url("../../../assets/images/contact/pen.png"), #f8f8f8;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position-y: 18px;
+  background-position-x: 19px;
+  width: 100%;
+  height: 180px;
+  resize: none;
+  margin-bottom: 30px;
+  border: none;
+}
+.contact-intro__form button {
+  margin: auto;
+  margin-bottom: 50px;
+  width: 265px;
+}
+
+#input-name {
+  background: url("../../../assets/images/contact/user.png"), #f8f8f8;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position-y: 50%;
+  background-position-x: 19px;
+}
+
+#input-phone {
+  background: url("../../../assets/images/contact/telephon.png"), #f8f8f8;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position-y: 50%;
+  background-position-x: 19px;
+}
+
+#input-email {
+  background: url("../../../assets/images/contact/email.png"), #f8f8f8;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position-y: 50%;
+  background-position-x: 19px;
+}
+
+#input-subject {
+  background: url("../../../assets/images/contact/user.png"), #f8f8f8;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position-y: 50%;
+  background-position-x: 19px;
+}
+
+.room-details-intro {
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+.room-details-intro__head-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #333333;
+  height: 300px;
+  padding: 20px;
+  color: #ffffff;
+}
+.room-details-intro__head-section h1 {
+  margin-top: 20px;
+}
+.room-details-intro__head-section h5 {
+  color: #ffffff;
+  font-weight: 300;
+}
+.room-details-intro__breadcrumbs {
+  position: absolute;
+  right: 15px;
+  top: 360px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 15px 25px;
+  height: auto;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.5px;
+}
+.room-details-intro__breadcrumbs :first-child {
+  font-family: "Archivo";
+}
+.room-details-intro__breadcrumbs :last-child {
+  color: #bead8e;
+}
+.room-details-intro__room-details {
+  padding: 20px;
+}
+.room-details-intro__room-details img {
+  width: 100%;
+}
+.room-details-intro__rooms-details-availability {
+  padding: 20px;
+}
+.room-details-intro__rooms-details-availability p {
+  text-align: center;
+  font-family: "Archivo";
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.room-details-intro__rooms-details-availability label {
+  font-size: "Archivo";
+  font-size: 14px;
+  font-weight: 600;
+}
+.room-details-intro__rooms-details-availability input {
+  font-family: "Archivo";
+  font-weight: 400;
+  font-size: 14px;
+  color: #777777;
+  margin: 13px 0 19px 0;
+  padding: 24px 29px 21px 24px;
+  width: 100%;
+  height: 60px;
+  border: none;
+}
+.room-details-intro__rooms-details-availability input[type=text] {
+  background: url(../../../assets/images/date_picker_grey.png) no-repeat, #f8f8f8;
+  background-position-y: 54%;
+  background-position-x: 87.5%;
+  background-size: 19px 19px;
+  object-fit: contain;
+}
+.room-details-intro__rooms-details-availability button {
+  width: 290px;
+}
+.room-details-intro__rooms-details-availability input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  display: block;
+  background: url(../../../assets/images/date_picker_grey.png) no-repeat center;
+  background-size: 19px 19px;
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
 }
