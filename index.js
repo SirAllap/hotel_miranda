@@ -84,3 +84,14 @@ const swiperRoomsCards = new Swiper('.swiper-rooms-cards', {
         prevEl: '.swiper-button-prev-rooms-cards',
     },
 })
+const swiperDetailsCards = new Swiper('.swiper-details-cards', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    // Pagination dots
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})

@@ -1411,7 +1411,6 @@ body {
 
 .room-details-intro {
   margin-top: 100px;
-  margin-bottom: 60px;
 }
 .room-details-intro__head-section {
   display: flex;
@@ -1453,7 +1452,14 @@ body {
   padding: 20px;
 }
 .room-details-intro__room-details img {
+  margin-top: 16px;
   width: 100%;
+}
+.room-details-intro__room-details h4 {
+  margin-top: 28px;
+}
+.room-details-intro__room-details h1 {
+  margin-top: 12px 0 16px 0;
 }
 .room-details-intro__rooms-details-availability {
   padding: 20px;
@@ -1463,7 +1469,7 @@ body {
   font-family: "Archivo";
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 35px;
+  margin: 29px 0 35px 0;
 }
 .room-details-intro__rooms-details-availability label {
   font-size: "Archivo";
@@ -1488,9 +1494,6 @@ body {
   background-size: 19px 19px;
   object-fit: contain;
 }
-.room-details-intro__rooms-details-availability button {
-  width: 290px;
-}
 .room-details-intro__rooms-details-availability input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 1;
   display: block;
@@ -1499,4 +1502,140 @@ body {
   width: 35px;
   height: 35px;
   object-fit: contain;
+}
+.room-details-intro__rooms-details-availability button {
+  width: 100%;
+  margin-bottom: 48px;
+}
+.room-details-intro__body-text p {
+  text-align: left;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #777777;
+}
+.room-details-intro__amenities {
+  padding: 0 20px 20px 20px;
+}
+.room-details-intro__amenities-services {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.room-details-intro__amenities-services img {
+  object-fit: contain;
+  width: 14px;
+  height: 14px;
+  margin-top: 15px;
+}
+.room-details-intro__amenities-services span {
+  margin-left: 8px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  color: #777777;
+}
+.room-details-intro__amenities-services-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.room-details-intro__amenities-services-right {
+  padding-left: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.room-details-intro__founder {
+  text-align: center;
+  width: 318px;
+  margin: 0 auto;
+}
+.room-details-intro__founder div {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.room-details-intro__founder div :first-child {
+  width: 46px;
+  position: absolute;
+  left: 65%;
+  transform: translate(-50%);
+}
+.room-details-intro__founder div :last-child {
+  width: 150px;
+}
+.room-details-intro__founder h4 {
+  margin: 38px 0 15px 0;
+  letter-spacing: -0.9px;
+}
+.room-details-intro__founder h5 {
+  color: #bdac8d;
+  font-size: 14px;
+  letter-spacing: 2.8px;
+}
+.room-details-intro__founder p {
+  line-height: 24px;
+  margin-top: 25px;
+  font-family: "Archivo";
+  font-size: 16px;
+  color: #777777;
+  margin-bottom: 40px;
+}
+.room-details-intro__cancellation {
+  padding: 20px;
+}
+.room-details-intro__cancellation p {
+  margin: 32px 0 100px 0;
+  text-align: left;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #777777;
+}
+
+hr {
+  border: 0.1px solid #f1f1f1;
+  margin-top: 14px;
+}
+
+.room-details-cards {
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 20px;
+}
+.room-details-cards img {
+  width: 100%;
+}
+.room-details-cards__card {
+  margin-top: 32px;
+}
+.room-details-cards__card-service-info img {
+  z-index: 5;
+  position: relative;
+  bottom: 26px;
+  width: 70%;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.room-details-cards__text-container {
+  margin: 0px 20px 40px 20px;
+}
+.room-details-cards p {
+  color: #777777;
+  margin-top: 20px;
+}
+.room-details-cards__text-frist-span {
+  font-size: 16px;
+}
+.room-details-cards__text-second-span {
+  font-size: 16px;
+  font-family: "Archivo";
+  font-weight: 700;
+  color: #bdbdbd;
+}
+.room-details-cards h4 {
+  text-align: left;
 }
