@@ -17,12 +17,17 @@ document.addEventListener('click', (event) => {
     }
 })
 
+const homeRoomsSliderMobile = document.querySelector('#mobileSlider')
+const homeRoomsSliderDesktop = document.querySelector('#desktopSlider')
 
 let isItDesktop = false
 window.onresize = function () {
     if (window.innerWidth >= 1000) {
         isItDesktop = true
-    } else { isItDesktop = false, document.querySelector('.header').style.marginTop = '0px' }
+    } else if (window.innerWidth < 1000) {
+        isItDesktop = false
+        document.querySelector('.header').style.marginTop = '0px'
+    }
 }
 
 let verticalSize = window.pageYOffset
@@ -37,17 +42,35 @@ window.onscroll = function () {
     }
 }
 
-
-const swiperRooms = new Swiper('.swiper-rooms', {
+const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
     // Optional parameters
-    direction: 'horizontal',
-    loop: false,
+    centeredSlides: true,
+    loop: true,
+    speed: 500,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 3000,
+    },
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    }
+    },
+    // Breakpoints
+    breakpoints: {
+        720: {
+            slidesPerView: 1.5,
+        },
+        1000: {
+            slidesPerView: 2.1,
+        },
+        1200: {
+            slidesPerView: 2.7,
+        },
+    },
 })
+
 const swiperFeatures = new Swiper('.swiper-features', {
     // Optional parameters
     direction: 'horizontal',
