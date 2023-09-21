@@ -68,3 +68,42 @@
     line-height: 43px;
     font-weight: $soft-weight;
 }
+//! new text
+.big-new-title {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90px;
+    letter-spacing: -2.4px;
+}
+.regular-new-title {
+    font-family: $old-font;
+    font-family: $old-font;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+.filled-new-text-clear {
+    color: #fff;
+    font-family: $robo-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+.filled-new-text {
+    font-family: $robo-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+.filled-arch-new-text-grey {
+    color: #777;
+    font-family: $arch-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
