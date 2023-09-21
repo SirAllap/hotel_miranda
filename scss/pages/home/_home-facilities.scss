@@ -1,9 +1,57 @@
 .home-facilities {
     margin-bottom: 60px;
     &__text-container {
+        margin-bottom: 60px;
         h4 {
             margin-bottom: 20px;
         }
         text-align: center;
     }
+    @include desktop {
+        .swiper-wrapper {
+            flex-wrap: wrap;
+        }
+        flex-wrap: wrap !important;
+        max-width: 1000px;
+        max-height: 911px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    @include xl {
+        .swiper-wrapper {
+            flex-wrap: wrap;
+        }
+        flex-wrap: wrap !important;
+        max-width: 1188px;
+        max-height: 911px;
+        margin: 0 auto;
+        padding: 0;
+    }
 }
+
+.swiper-slide-card {
+    @include md {
+    }
+    @include desktop {
+        margin: 0;
+        padding: 0;
+        height: 299px !important;
+        width: 320px !important;
+    }
+    @include xl {
+        margin: 0;
+        padding: 0;
+        height: 349px !important;
+        width: 370px !important;
+    }
+}
+
+//! mixings temp
+/*
+@include md {
+}
+@include desktop {
+}
+@include xl {
+}
+*/

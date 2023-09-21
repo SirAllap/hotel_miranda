@@ -20,35 +20,50 @@ document.addEventListener('click', (event) => {
 const homeRoomsSliderMobile = document.querySelector('#mobileSlider')
 const homeRoomsSliderDesktop = document.querySelector('#desktopSlider')
 
-let isItDesktop = false
+
 window.onresize = function () {
-    if (window.innerWidth >= 1000) {
-        isItDesktop = true
-    } else if (window.innerWidth < 1000) {
-        isItDesktop = false
-        document.querySelector('.header').style.marginTop = '0px'
+    if (window.innerWidth <= 1000) {
+        // document.querySelector('.header').styleSheets[0].rules[0].style.removeProperty("margin-top")
+        runDesktop(false)
     }
+    if (window.matchMedia('(min-width:1000px)').matches) {
+        destroyFeaturesSwiper()
+    }
+    if (!window.matchMedia('(min-width:1000px)').matches) {
+        runFeaturesSwiper()
+    }
+    if (window.innerWidth > 1000) {
+        runDesktop(true)
+    }
+
+}
+const runDesktop = (bool) => {
+    if (!bool) {
+        // window.location.reload()
+        document.querySelector('.header').style.removeProperty("margin-top")
+    } else {
+        let verticalSize = window.pageYOffset
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset
+            document.querySelector('.header').style.marginTop = '40px'
+            if (verticalSize < currentScrollPos) {
+                document.querySelector('.header').style.marginTop = '-150px'
+            }
+            verticalSize = currentScrollPos
+        }
+    }
+
 }
 
-let verticalSize = window.pageYOffset
-window.onscroll = function () {
-    let currentScrollPos = window.pageYOffset
-    if (isItDesktop) {
-        document.querySelector('.header').style.marginTop = '40px'
-        if (verticalSize < currentScrollPos) {
-            document.querySelector('.header').style.marginTop = '-150px'
-        }
-        verticalSize = currentScrollPos
-    }
-}
+
 
 const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
     // Optional parameters
     centeredSlides: true,
     loop: true,
-    speed: 500,
     slidesPerView: 1,
     spaceBetween: 20,
+    speed: 500,
     autoplay: {
         delay: 3000,
     },
@@ -71,16 +86,52 @@ const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
     },
 })
 
-const swiperFeatures = new Swiper('.swiper-features', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: false,
-    spaceBetween: 40,
-    // Pagination dots
-    pagination: {
-        el: ".swiper-pagination",
-    },
-})
+
+
+// window.onload = function () { destroyFeaturesSwiper() }
+let swiperFeatures
+const destroyFeaturesSwiper = () => {
+    if (swiperFeatures !== undefined) swiperFeatures.destroy(true, true)
+    else runFeaturesSwiper()
+}
+
+const runFeaturesSwiper = () => {
+    swiperFeatures = new Swiper('.swiper-features', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 40,
+        slidesPerView: 'auto',
+        a11y: true,
+        keyboardControl: true,
+        grabCursor: true,
+
+        // Pagination dots
+        pagination: {
+            el: ".swiper-pagination",
+        },
+
+        // Breakpoints
+        breakpoints: {
+            720: {
+                slidesPerView: 1.5,
+            },
+            1000: {
+                slidesPerView: 2.1,
+                spaceBetween: 0,
+            },
+            1200: {
+                slidesPerView: 2.7,
+                spaceBetween: 0,
+            },
+        },
+    })
+}
+
+
+
+
+
 const swiperFoodMenu = new Swiper('.swiper-food-menu', {
     // Optional parameters
     direction: 'horizontal',
@@ -138,3 +189,17 @@ const swiperDetailsCards = new Swiper('.swiper-details-cards', {
         prevEl: '.swiper-button-prev',
     },
 })
+
+
+
+// const breakpoint = window.matchMedia("(min-width:31.25em)")
+
+// // keep track of swiper instances to destroy later
+// let mySwiper
+
+// const breakpointChecker = function () { console.log('constantly checking') }
+
+// breakpoint.addListener(breakpointChecker)()
+
+// // kickstart
+// breakpointChecker()

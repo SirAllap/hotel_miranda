@@ -1,11 +1,25 @@
 .general-features-card {
+    &:hover {
+        transform: scale(1.05);
+    }
     padding: 30px;
-    margin-top: 40px;
     margin-bottom: 20px;
+    @include desktop {
+    }
+    @include xl {
+    }
     &__features-left-img {
+        width: 70px;
         margin-top: 60px;
+        @include desktop {
+            margin: 30px 0 0 30px;
+        }
+        @include xl {
+            margin: 60px 0 0 60px;
+        }
     }
     &__features-card-text {
+        margin: 0 auto;
         width: 80%;
         h4 {
             margin-top: 20px;
@@ -15,43 +29,53 @@
             margin-top: 10px;
             color: $color-softGreyText;
         }
+        @include desktop {
+            h4 {
+                margin-top: 0px;
+                font-size: 30px;
+            }
+            p {
+                margin-top: 0px;
+                color: $color-softGreyText;
+            }
+        }
     }
 }
 .rating {
     background: url("../../../assets/images/features/bg_numbers/01.png"), $color-white;
     background-repeat: no-repeat;
-    background-position-y: 20px;
-    background-position-x: 210px;
+    background-position-y: 5%;
+    background-position-x: 95%;
 }
 .clock {
     background: url("../../../assets/images/features/bg_numbers/02.png"), $color-white;
     background-repeat: no-repeat;
-    background-position-y: 20px;
-    background-position-x: 210px;
+    background-position-y: 5%;
+    background-position-x: 95%;
 }
 .pointer {
     background: url("../../../assets/images/features/bg_numbers/03.png"), $color-white;
     background-repeat: no-repeat;
-    background-position-y: 20px;
-    background-position-x: 210px;
+    background-position-y: 5%;
+    background-position-x: 95%;
 }
 .clock-stop {
     background: url("../../../assets/images/features/bg_numbers/04.png"), $color-white;
     background-repeat: no-repeat;
-    background-position-y: 20px;
-    background-position-x: 210px;
+    background-position-y: 5%;
+    background-position-x: 95%;
 }
 .credit-card {
     background: url("../../../assets/images/features/bg_numbers/05.png"), $color-white;
     background-repeat: no-repeat;
-    background-position-y: 20px;
-    background-position-x: 210px;
+    background-position-y: 5%;
+    background-position-x: 95%;
 }
 .award {
     background: url("../../../assets/images/features/bg_numbers/06.png"), $color-white;
     background-repeat: no-repeat;
-    background-position-y: 20px;
-    background-position-x: 210px;
+    background-position-y: 5%;
+    background-position-x: 95%;
 }
 
 .general-features-black-card {

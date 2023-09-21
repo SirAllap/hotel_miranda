@@ -563,13 +563,27 @@ Common breakpoints:
 
 .general-features-card {
   padding: 30px;
-  margin-top: 40px;
   margin-bottom: 20px;
 }
+.general-features-card:hover {
+  transform: scale(1.05);
+}
 .general-features-card__features-left-img {
+  width: 70px;
   margin-top: 60px;
 }
+@media (min-width: 1000px) {
+  .general-features-card__features-left-img {
+    margin: 30px 0 0 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .general-features-card__features-left-img {
+    margin: 60px 0 0 60px;
+  }
+}
 .general-features-card__features-card-text {
+  margin: 0 auto;
   width: 80%;
 }
 .general-features-card__features-card-text h4 {
@@ -580,47 +594,57 @@ Common breakpoints:
   margin-top: 10px;
   color: #777777;
 }
+@media (min-width: 1000px) {
+  .general-features-card__features-card-text h4 {
+    margin-top: 0px;
+    font-size: 30px;
+  }
+  .general-features-card__features-card-text p {
+    margin-top: 0px;
+    color: #777777;
+  }
+}
 
 .rating {
   background: url("../../../assets/images/features/bg_numbers/01.png"), #ffffff;
   background-repeat: no-repeat;
-  background-position-y: 20px;
-  background-position-x: 210px;
+  background-position-y: 5%;
+  background-position-x: 95%;
 }
 
 .clock {
   background: url("../../../assets/images/features/bg_numbers/02.png"), #ffffff;
   background-repeat: no-repeat;
-  background-position-y: 20px;
-  background-position-x: 210px;
+  background-position-y: 5%;
+  background-position-x: 95%;
 }
 
 .pointer {
   background: url("../../../assets/images/features/bg_numbers/03.png"), #ffffff;
   background-repeat: no-repeat;
-  background-position-y: 20px;
-  background-position-x: 210px;
+  background-position-y: 5%;
+  background-position-x: 95%;
 }
 
 .clock-stop {
   background: url("../../../assets/images/features/bg_numbers/04.png"), #ffffff;
   background-repeat: no-repeat;
-  background-position-y: 20px;
-  background-position-x: 210px;
+  background-position-y: 5%;
+  background-position-x: 95%;
 }
 
 .credit-card {
   background: url("../../../assets/images/features/bg_numbers/05.png"), #ffffff;
   background-repeat: no-repeat;
-  background-position-y: 20px;
-  background-position-x: 210px;
+  background-position-y: 5%;
+  background-position-x: 95%;
 }
 
 .award {
   background: url("../../../assets/images/features/bg_numbers/06.png"), #ffffff;
   background-repeat: no-repeat;
-  background-position-y: 20px;
-  background-position-x: 210px;
+  background-position-y: 5%;
+  background-position-x: 95%;
 }
 
 .general-features-black-card {
@@ -1446,12 +1470,62 @@ Common breakpoints:
   margin-bottom: 60px;
 }
 .home-facilities__text-container {
+  margin-bottom: 60px;
   text-align: center;
 }
 .home-facilities__text-container h4 {
   margin-bottom: 20px;
 }
+@media (min-width: 1000px) {
+  .home-facilities {
+    flex-wrap: wrap !important;
+    max-width: 1000px;
+    max-height: 911px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .home-facilities .swiper-wrapper {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1200px) {
+  .home-facilities {
+    flex-wrap: wrap !important;
+    max-width: 1188px;
+    max-height: 911px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .home-facilities .swiper-wrapper {
+    flex-wrap: wrap;
+  }
+}
 
+@media (min-width: 1000px) {
+  .swiper-slide-card {
+    margin: 0;
+    padding: 0;
+    height: 299px !important;
+    width: 320px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .swiper-slide-card {
+    margin: 0;
+    padding: 0;
+    height: 349px !important;
+    width: 370px !important;
+  }
+}
+
+/*
+@include md {
+}
+@include desktop {
+}
+@include xl {
+}
+*/
 .home-menu {
   overflow: clip;
   padding: 20px;
