@@ -18,6 +18,26 @@ document.addEventListener('click', (event) => {
 })
 
 
+let isItDesktop = false
+window.onresize = function () {
+    if (window.innerWidth >= 1000) {
+        isItDesktop = true
+    } else { isItDesktop = false, document.querySelector('.header').style.marginTop = '0px' }
+}
+
+let verticalSize = window.pageYOffset
+window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset
+    if (isItDesktop) {
+        document.querySelector('.header').style.marginTop = '40px'
+        if (verticalSize < currentScrollPos) {
+            document.querySelector('.header').style.marginTop = '-150px'
+        }
+        verticalSize = currentScrollPos
+    }
+}
+
+
 const swiperRooms = new Swiper('.swiper-rooms', {
     // Optional parameters
     direction: 'horizontal',

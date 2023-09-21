@@ -1,23 +1,92 @@
 .home-intro {
-    margin-top: 100px;
     margin-bottom: 60px;
+    background-color: $color-midStrongGreyBack;
+
     &__text {
-        background-color: $color-midStrongGreyBack;
-        height: 530px;
+        width: 100%;
         color: #ffffff;
+        @include md {
+            max-width: 708px;
+            margin: 0 auto;
+        }
+        @include desktop {
+            max-width: 988px;
+            margin: 0 auto;
+        }
+        @include xl {
+            max-width: 1188px;
+            margin: 0 auto;
+        }
     }
     &__text-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         margin-left: 20px;
-        padding-top: 80px;
+        padding-top: 75px;
         margin-bottom: 15px;
-        height: 280px;
+        min-height: 310px;
+        text-align: left;
+        @include md {
+            max-width: 661px;
+            min-height: fit-content;
+            padding: 178px 0 0 0;
+            margin: 0;
+        }
+        @include desktop {
+            max-width: 661px;
+            min-height: fit-content;
+            padding: 178px 0 0 0;
+            margin: 0;
+        }
+        @include xl {
+            max-width: 661px;
+            min-height: fit-content;
+            padding: 178px 0 0 0;
+            margin: 0;
+        }
         h5 {
             font-weight: $soft-weight;
             width: 240px;
             margin-bottom: 50px;
+            @include md {
+                margin: 0;
+                min-width: 340px;
+                margin-bottom: 40px;
+                height: fit-content;
+            }
+            @include desktop {
+                margin: 0;
+                min-width: 340px;
+                margin-bottom: 40px;
+                height: fit-content;
+            }
+            @include xl {
+                margin: 0;
+                min-width: 340px;
+                margin-bottom: 40px;
+                height: fit-content;
+            }
+        }
+        h1 {
+            @include md {
+                max-height: 250px;
+                font-size: 120px;
+                line-height: 130px;
+                letter-spacing: -3.6px;
+                font-weight: 400;
+            }
+            @include desktop {
+                max-height: 250px;
+                font-size: 120px;
+                line-height: 130px;
+                letter-spacing: -3.6px;
+                font-weight: 400;
+            }
+            @include xl {
+                max-height: 250px;
+                font-size: 120px;
+                line-height: 130px;
+                letter-spacing: -3.6px;
+                font-weight: 400;
+            }
         }
     }
     &__button-section {
@@ -26,21 +95,129 @@
         justify-content: space-evenly;
         margin-left: 20px;
         height: 200px;
+
+        @include md {
+            max-width: 708px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            max-width: fit-content;
+            height: fit-content;
+            padding-bottom: 103px;
+            margin: 32px 0px 0px 0px;
+        }
+        @include desktop {
+            max-width: 988px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            max-width: fit-content;
+            height: fit-content;
+            padding-bottom: 103px;
+            margin: 32px 0px 0px 0px;
+        }
+        @include xl {
+            max-width: 1188px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            max-width: fit-content;
+            height: fit-content;
+            padding-bottom: 103px;
+            margin: 32px 0px 0px 0px;
+        }
+    }
+
+    &__button {
+        @include md {
+            &--left {
+                margin: 0 30px 0 0;
+            }
+        }
+        @include desktop {
+            &--left {
+                margin: 0 30px 0 0;
+            }
+        }
+        @include xl {
+            &--left {
+                margin: 0 30px 0 0;
+            }
+        }
     }
     &__calendar-picker {
+        min-width: 100%;
+        background-color: $color-strongGreyBack;
+    }
+    &__calendar-picker-inner {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        background-color: $color-strongGreyBack;
         height: 354px;
         padding: 20px;
+
+        @include md {
+            max-width: 708px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-height: 152px;
+            margin: auto;
+            padding: 0;
+        }
+        @include desktop {
+            max-width: 988px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-height: 152px;
+            margin: auto;
+            padding: 0;
+        }
+        @include xl {
+            max-width: 1188px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-height: 152px;
+            margin: auto;
+            padding: 0;
+        }
+    }
+    &__calendar-picker-inner-input {
         label {
             font-family: $robo-font;
             color: $color-white;
             font-size: $smallPlus-font;
         }
+        input {
+            margin-top: 20px;
+        }
+
+        @include md {
+            min-width: 150px;
+            height: 75px;
+            &--right {
+                margin: 0 50px 0 30px;
+            }
+        }
+        @include desktop {
+            min-width: 230px;
+            height: 75px;
+            &--right {
+                margin: 0 130px 0 30px;
+            }
+        }
+        @include xl {
+            min-width: 330px;
+            height: 75px;
+            &--right {
+                margin: 0 230px 0 30px;
+            }
+        }
     }
     &__calendar-picker input[type="date"] {
+        position: relative;
         display: block;
         color: $color-ligthGrayDisable;
         font-family: $robo-font;
@@ -57,7 +234,7 @@
     }
     input[type="date"]::-webkit-calendar-picker-indicator {
         position: absolute;
-        left: 10px;
+        left: -10px;
         opacity: 1;
         display: block;
         background: url(../../../assets/images/date_picker.png) no-repeat center;

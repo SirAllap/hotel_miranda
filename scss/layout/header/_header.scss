@@ -6,26 +6,86 @@
         "GRAD" 20,
         "opsz" 25;
 }
+.lock {
+    min-width: 100vw;
+    height: 100px;
+    background-color: #222222;
+}
 .header {
+    margin: 0 auto;
     z-index: 11;
     position: fixed;
     top: 0;
     background-color: $color-white;
     height: 100px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    @include desktop {
+        margin-top: 40px;
+        max-width: 1420px;
+        height: 120px;
+        background-color: white;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+    &__drop-down-menu {
+        @include desktop {
+            display: none;
+        }
+    }
     &__mobile-left-items {
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 50vw;
+        @include desktop {
+            width: 30vw;
+        }
+    }
+    &__desktop-menu {
+        @include desktop {
+            display: block;
+        }
+
+        display: none;
+        font-family: $arch-font;
+        font-size: 16px;
+        width: 388px;
+    }
+    &__desktop-menu-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 400px;
+        height: 100%;
+    }
+    &__desktop-menu-list-item {
+        margin-right: 40px;
+        list-style-type: none;
+        a {
+            text-decoration: none;
+            color: black;
+            line-height: 2.5;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    &__desktop-menu-list-item :last-child {
+        margin-right: 0;
     }
     &__mobile-burger-icon {
         display: block;
         cursor: pointer;
+        @include desktop {
+            display: none;
+        }
     }
     &__mobile-burger-icon.hide {
         display: none;
@@ -45,14 +105,24 @@
         flex-direction: row;
         align-items: center;
         margin-left: 30px;
+        @include desktop {
+            margin-left: 0;
+        }
     }
     &__logo-image-h {
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
         height: 50px;
-        box-shadow: 0px 14px 24px rgba(139, 139, 139, 0.25);
+        @include desktop {
+            height: 90px;
+        }
     }
     &__logo-image-words {
         margin-left: 20px;
         height: 25px;
+        @include desktop {
+            margin-left: 30px;
+            height: 45px;
+        }
     }
     &__mobile-icons-right {
         width: 50vw;
@@ -63,8 +133,31 @@
         div {
             font-size: 30px;
         }
+
+        @include desktop {
+            margin-right: 70px;
+        }
     }
-    &__mobile-search-icon {
+    &__search-icon {
         margin-left: 20px;
+        @include desktop {
+            padding: 10px;
+            border: 2px solid rgba(133, 133, 133, 0.3);
+        }
+    }
+    &__person-icon {
+        @include desktop {
+            padding: 10px;
+            border: 2px solid rgba(133, 133, 133, 0.3);
+        }
+    }
+    &__desktop-burger-icon {
+        display: none;
+        @include desktop {
+            margin-left: 20px;
+            display: inline;
+            padding: 10px;
+            border: 2px solid rgba(133, 133, 133, 0.3);
+        }
     }
 }
