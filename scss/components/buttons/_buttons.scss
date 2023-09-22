@@ -1,39 +1,42 @@
-.button-beish {
+.button {
     font-family: $arch-font;
-    background-color: $color-beish;
     color: $color-white;
-    font-size: $small-font;
     font-weight: $strong-weight;
     letter-spacing: 2.8px;
     line-height: 15.23px;
+    font-size: $small-font;
     display: block;
     width: 216px;
     height: 60px;
-    border: none;
-}
-.button-beish-auto {
-    font-family: $arch-font;
-    background-color: $color-beish;
-    color: $color-white;
-    font-size: $small-font;
-    font-weight: $strong-weight;
-    letter-spacing: 2.8px;
-    line-height: 15.23px;
-    display: block;
-    width: fit-content;
-    height: 60px;
-    border: 0;
-}
-.button-grey {
-    font-family: $arch-font;
-    background-color: $color-midStrongGreyBack;
-    color: $color-white;
-    font-size: $small-font;
-    font-weight: $strong-weight;
-    letter-spacing: 2.8px;
-    line-height: 15.23px;
-    display: block;
-    width: 216px;
-    height: 60px;
-    border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
+    &--beige {
+        background-color: $color-beish;
+        border: none;
+        &:hover {
+            background-color: $color-midStrongGreyBack;
+            border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
+        }
+    }
+    &--beige-no-animation {
+        background-color: $color-beish;
+        border: none;
+        &:hover {
+            background-color: $color-midStrongGreyBack;
+            border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
+        }
+    }
+    &--auto {
+        width: fit-content;
+        &:hover {
+            background-color: $color-midStrongGreyBack;
+            border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
+        }
+    }
+    &--grey {
+        background-color: $color-midStrongGreyBack;
+        border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
+        &:hover {
+            background-color: $color-beish;
+            border: none;
+        }
+    }
 }

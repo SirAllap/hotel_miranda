@@ -25,6 +25,20 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     @include desktop {
         margin-top: 40px;
+        max-width: 1220px;
+        height: 120px;
+        background-color: white;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+        &--desktop {
+            margin-top: 40px;
+        }
+        &--hide-on-top {
+            margin-top: -150px;
+        }
+    }
+    @include xl {
+        margin-top: 40px;
         max-width: 1420px;
         height: 120px;
         background-color: white;
@@ -42,7 +56,10 @@
         align-items: center;
         width: 50vw;
         @include desktop {
-            width: 30vw;
+            width: 90%;
+        }
+        @include xl {
+            width: 35%;
         }
     }
     &__desktop-menu {

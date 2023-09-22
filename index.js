@@ -3,58 +3,60 @@
 const icon_burger = document.querySelector('.header__mobile-burger-icon')
 const icon_close = document.querySelector('.header__mobile-close-icon')
 const drop_down = document.querySelector('.mobile__menu-list')
+const header = document.querySelector('.header')
 
-document.addEventListener('click', (event) => {
-    if (event.target.matches('.header__mobile-burger-icon')) {
-        icon_burger.classList.add('hide')
-        icon_close.classList.add('show')
-        drop_down.classList.add('show')
-    }
-    if (event.target.matches('.header__mobile-close-icon')) {
-        icon_close.classList.remove('show')
-        icon_burger.classList.remove('hide')
-        drop_down.classList.remove('show')
-    }
+icon_burger.addEventListener('click', () => {
+    icon_burger.classList.toggle('hide')
+    icon_close.classList.toggle('show')
+    drop_down.classList.toggle('show')
+})
+icon_close.addEventListener('click', () => {
+    icon_burger.classList.toggle('hide')
+    icon_close.classList.toggle('show')
+    drop_down.classList.toggle('show')
 })
 
-const homeRoomsSliderMobile = document.querySelector('#mobileSlider')
-const homeRoomsSliderDesktop = document.querySelector('#desktopSlider')
 
+window.onload = () => {
+    window.pageYOffset > 99 ? header.classList.add('header--hide-on-top') :
+        header.classList.remove('header--hide-on-top')
+}
 
 window.onresize = function () {
-    if (window.innerWidth >= 998) {
-        runDesktop(true)
+    if (window.innerWidth >= 1000) {
+        runDesktopView()
         destroyFeaturesSwiper()
-    }
-    if (window.innerWidth >= 718) {
-        destroyRestaurantSwiper()
-    }
-    if (!window.innerWidth < 718) {
-        runRestaurantSwiper()
-    }
-    if (!window.innerWidth < 998) {
+    } else {
+        runDevicesView()
         runFeaturesSwiper()
     }
-    if (window.innerWidth <= 1000) {
-        runDesktop(false)
+    if (window.innerWidth >= 720) {
+        destroyRestaurantSwiper()
+    } else {
+        runRestaurantSwiper()
     }
 }
 
-const runDesktop = (bool) => {
-    if (!bool) {
-        document.querySelector('.header').style.removeProperty("margin-top")
-    } else {
-        let verticalSize = window.pageYOffset
-        window.onscroll = function () {
-            let currentScrollPos = window.pageYOffset
-            document.querySelector('.header').style.marginTop = '40px'
-            if (verticalSize < currentScrollPos) {
-                document.querySelector('.header').style.marginTop = '-150px'
-            }
-            verticalSize = currentScrollPos
-        }
-    }
+const runDesktopView = () => {
+    header.classList.add('header--desktop')
+}
+const runDevicesView = () => {
+    header.classList.remove('header--desktop')
+}
 
+window.onmousemove = (e) => {
+    if (e.clientY <= 100) {
+        header.classList.remove('header--hide-on-top')
+    }
+}
+
+window.onscroll = () => {
+    let verticalSizeScrollBar = window.pageYOffset
+    if (verticalSizeScrollBar > 99) {
+        header.classList.add('header--hide-on-top')
+    } else {
+        header.classList.remove('header--hide-on-top')
+    }
 }
 
 const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
@@ -203,4 +205,3 @@ const swiperDetailsCards = new Swiper('.swiper-details-cards', {
 // breakpoint.addListener(breakpointChecker)()
 
 // // kickstart
-// breakpointChecker()

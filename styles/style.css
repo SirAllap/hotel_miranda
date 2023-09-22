@@ -5,7 +5,7 @@ html,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
 }
 
 body {
@@ -27,14 +27,6 @@ Common breakpoints:
 - 1201px and more —  Extra large screens, TV
 */
 /* Screen media variables */
-/*
-@include md {
-}
-@include desktop {
-}
-@include xl {
-}
-*/
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 20, "opsz" 25;
 }
@@ -61,6 +53,22 @@ Common breakpoints:
 @media (min-width: 1000px) {
   .header {
     margin-top: 40px;
+    max-width: 1220px;
+    height: 120px;
+    background-color: white;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .header--desktop {
+    margin-top: 40px;
+  }
+  .header--hide-on-top {
+    margin-top: -150px;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    margin-top: 40px;
     max-width: 1420px;
     height: 120px;
     background-color: white;
@@ -81,7 +89,12 @@ Common breakpoints:
 }
 @media (min-width: 1000px) {
   .header__mobile-left-items {
-    width: 30vw;
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .header__mobile-left-items {
+    width: 35%;
   }
 }
 .header__desktop-menu {
@@ -360,46 +373,47 @@ Common breakpoints:
   margin-bottom: 20px;
 }
 
-.button-beish {
+.button {
   font-family: "Archivo";
-  background-color: #bead8e;
   color: #ffffff;
-  font-size: 14px;
   font-weight: 700;
   letter-spacing: 2.8px;
   line-height: 15.23px;
+  font-size: 14px;
   display: block;
   width: 216px;
   height: 60px;
+}
+.button--beige {
+  background-color: #bead8e;
   border: none;
 }
-
-.button-beish-auto {
-  font-family: "Archivo";
-  background-color: #bead8e;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2.8px;
-  line-height: 15.23px;
-  display: block;
-  width: fit-content;
-  height: 60px;
-  border: 0;
-}
-
-.button-grey {
-  font-family: "Archivo";
+.button--beige:hover {
   background-color: #333333;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2.8px;
-  line-height: 15.23px;
-  display: block;
-  width: 216px;
-  height: 60px;
   border: 2px rgba(255, 255, 255, 0.33) solid;
+}
+.button--beige-no-animation {
+  background-color: #bead8e;
+  border: none;
+}
+.button--beige-no-animation:hover {
+  background-color: #333333;
+  border: 2px rgba(255, 255, 255, 0.33) solid;
+}
+.button--auto {
+  width: fit-content;
+}
+.button--auto:hover {
+  background-color: #333333;
+  border: 2px rgba(255, 255, 255, 0.33) solid;
+}
+.button--grey {
+  background-color: #333333;
+  border: 2px rgba(255, 255, 255, 0.33) solid;
+}
+.button--grey:hover {
+  background-color: #bead8e;
+  border: none;
 }
 
 .subtitle-trigger {
@@ -1929,6 +1943,13 @@ Common breakpoints:
   font-family: "Archivo";
   font-weight: 700;
   color: #bdbdbd;
+}
+.rooms-cards__text-second-span :hover {
+  color: #222222;
+}
+.rooms-cards__text-second-span a {
+  text-decoration: none;
+  color: inherit;
 }
 
 #pagination-rooms-cards {
