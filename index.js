@@ -22,24 +22,26 @@ const homeRoomsSliderDesktop = document.querySelector('#desktopSlider')
 
 
 window.onresize = function () {
-    if (window.innerWidth <= 1000) {
-        // document.querySelector('.header').styleSheets[0].rules[0].style.removeProperty("margin-top")
-        runDesktop(false)
-    }
-    if (window.matchMedia('(min-width:1000px)').matches) {
+    if (window.innerWidth >= 998) {
+        runDesktop(true)
         destroyFeaturesSwiper()
     }
-    if (!window.matchMedia('(min-width:1000px)').matches) {
+    if (window.innerWidth >= 718) {
+        destroyRestaurantSwiper()
+    }
+    if (!window.innerWidth < 718) {
+        runRestaurantSwiper()
+    }
+    if (!window.innerWidth < 998) {
         runFeaturesSwiper()
     }
-    if (window.innerWidth > 1000) {
-        runDesktop(true)
+    if (window.innerWidth <= 1000) {
+        runDesktop(false)
     }
-
 }
+
 const runDesktop = (bool) => {
     if (!bool) {
-        // window.location.reload()
         document.querySelector('.header').style.removeProperty("margin-top")
     } else {
         let verticalSize = window.pageYOffset
@@ -54,8 +56,6 @@ const runDesktop = (bool) => {
     }
 
 }
-
-
 
 const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
     // Optional parameters
@@ -99,18 +99,12 @@ const runFeaturesSwiper = () => {
     swiperFeatures = new Swiper('.swiper-features', {
         // Optional parameters
         direction: 'horizontal',
-        loop: false,
+        loop: true,
         spaceBetween: 40,
-        slidesPerView: 'auto',
-        a11y: true,
-        keyboardControl: true,
-        grabCursor: true,
-
         // Pagination dots
         pagination: {
             el: ".swiper-pagination",
         },
-
         // Breakpoints
         breakpoints: {
             720: {
@@ -128,7 +122,23 @@ const runFeaturesSwiper = () => {
     })
 }
 
+let swiperRestaurantPhotos
+const destroyRestaurantSwiper = () => {
+    if (swiperRestaurantPhotos !== undefined) swiperRestaurantPhotos.destroy(true, true)
+    else runRestaurantSwiper()
+}
 
+const runRestaurantSwiper = () => {
+    swiperRestaurantPhotos = new Swiper('.swiper-restaurant-photos', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        // Pagination dots
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    })
+}
 
 
 
@@ -141,15 +151,6 @@ const swiperFoodMenu = new Swiper('.swiper-food-menu', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
-})
-const swiperRestaurantPhotos = new Swiper('.swiper-restaurant-photos', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: false,
-    // Pagination dots
-    pagination: {
-        el: ".swiper-pagination",
     },
 })
 const swiperFunFact = new Swiper('.swiper-fun-fact', {

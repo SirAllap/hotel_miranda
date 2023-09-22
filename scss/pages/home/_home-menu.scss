@@ -1,4 +1,14 @@
 .home-menu {
+    @include md {
+    }
+    @include desktop {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+    @include xl {
+        margin: 0 auto;
+        max-width: 1188px;
+    }
     overflow: clip;
     padding: 20px;
     margin-bottom: 60px;
@@ -13,6 +23,27 @@
         margin-left: 100%;
         float: right;
         margin-right: -50px;
+        @include md {
+            width: 229px;
+            height: 229px;
+            margin: 0;
+            padding: 0;
+            float: none;
+        }
+        @include desktop {
+            width: 229px;
+            height: 229px;
+            margin: 0;
+            padding: 0;
+            float: none;
+        }
+        @include xl {
+            width: 229px;
+            height: 229px;
+            margin: 0;
+            padding: 0;
+            float: none;
+        }
     }
     &__icon-text {
         h1 {
@@ -36,6 +67,24 @@
         width: 100%;
         height: 400px;
         padding-bottom: 50px;
+        @include md {
+            width: 30vw !important;
+            height: 30vw !important;
+            padding: calc(1vw - 6px);
+            margin: 0 auto;
+        }
+        @include desktop {
+            width: 25vw !important;
+            height: 25vw !important;
+            padding: calc(1vw - 6px);
+            margin: 0 auto;
+        }
+        @include xl {
+            width: 20vw !important;
+            height: 20vw !important;
+            padding: calc(1vw - 6px);
+            margin: 0 auto;
+        }
     }
     &__acheivements {
         margin-top: 50px;
@@ -47,15 +96,52 @@
         font-size: 16px;
         line-height: 21.82px;
         font-weight: $strong-weight;
+        @include md {
+            height: 348px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        @include desktop {
+        }
+        @include xl {
+        }
     }
     &__acheivements img {
         width: 180px;
     }
     &__acheivements-item {
         margin-bottom: 50px;
+        @include md {
+            padding: 0;
+            margin: 0;
+        }
+        @include desktop {
+            padding: 0;
+            margin: 0;
+        }
+        @include xl {
+            padding: 0;
+            margin: 0;
+        }
     }
     &__acheivements :last-child {
         margin-bottom: 10px;
+        @include md {
+            padding: 0;
+            margin: 0;
+        }
+        @include desktop {
+            padding: 0;
+            margin: 0;
+        }
+        @include xl {
+            padding: 0;
+            margin: 0;
+        }
     }
     &__slider-button-prev {
         top: var(--swiper-navigation-top-offset, 90%) !important;

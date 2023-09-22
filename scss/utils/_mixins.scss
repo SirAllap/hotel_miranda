@@ -13,6 +13,16 @@ Common breakpoints:
 // $large: 960px;
 // $xtra-large: 1200px;
 
+//! mixings temp
+/*
+@include md {
+}
+@include desktop {
+}
+@include xl {
+}
+*/
+
 $breakpoints: (
     "xs": 320px,
     "sm": 480px,

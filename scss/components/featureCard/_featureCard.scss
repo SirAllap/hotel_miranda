@@ -1,17 +1,17 @@
 .general-features-card {
-    &:hover {
-        transform: scale(1.05);
-    }
     padding: 30px;
     margin-bottom: 20px;
-    @include desktop {
-    }
     @include xl {
     }
     &__features-left-img {
         width: 70px;
+        height: 70px;
         margin-top: 60px;
+        object-fit: contain;
         @include desktop {
+            &:hover {
+                transform: scale(1.05);
+            }
             margin: 30px 0 0 30px;
         }
         @include xl {

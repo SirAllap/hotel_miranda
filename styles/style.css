@@ -27,6 +27,14 @@ Common breakpoints:
 - 1201px and more —  Extra large screens, TV
 */
 /* Screen media variables */
+/*
+@include md {
+}
+@include desktop {
+}
+@include xl {
+}
+*/
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 20, "opsz" 25;
 }
@@ -561,20 +569,26 @@ Common breakpoints:
   stroke: black !important;
 }
 
+.swiper-pagination {
+  pointer-events: all !important;
+}
+
 .general-features-card {
   padding: 30px;
   margin-bottom: 20px;
 }
-.general-features-card:hover {
-  transform: scale(1.05);
-}
 .general-features-card__features-left-img {
   width: 70px;
+  height: 70px;
   margin-top: 60px;
+  object-fit: contain;
 }
 @media (min-width: 1000px) {
   .general-features-card__features-left-img {
     margin: 30px 0 0 30px;
+  }
+  .general-features-card__features-left-img:hover {
+    transform: scale(1.05);
   }
 }
 @media (min-width: 1200px) {
@@ -1518,18 +1532,22 @@ Common breakpoints:
   }
 }
 
-/*
-@include md {
-}
-@include desktop {
-}
-@include xl {
-}
-*/
 .home-menu {
   overflow: clip;
   padding: 20px;
   margin-bottom: 60px;
+}
+@media (min-width: 1000px) {
+  .home-menu {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  .home-menu {
+    margin: 0 auto;
+    max-width: 1188px;
+  }
 }
 .home-menu__food-items img {
   width: 120px;
@@ -1542,6 +1560,33 @@ Common breakpoints:
   margin-left: 100%;
   float: right;
   margin-right: -50px;
+}
+@media (min-width: 720px) {
+  .home-menu__donut-img {
+    width: 229px;
+    height: 229px;
+    margin: 0;
+    padding: 0;
+    float: none;
+  }
+}
+@media (min-width: 1000px) {
+  .home-menu__donut-img {
+    width: 229px;
+    height: 229px;
+    margin: 0;
+    padding: 0;
+    float: none;
+  }
+}
+@media (min-width: 1200px) {
+  .home-menu__donut-img {
+    width: 229px;
+    height: 229px;
+    margin: 0;
+    padding: 0;
+    float: none;
+  }
 }
 .home-menu__icon-text h1 {
   margin-top: 20px;
@@ -1564,6 +1609,30 @@ Common breakpoints:
   height: 400px;
   padding-bottom: 50px;
 }
+@media (min-width: 720px) {
+  .home-menu__restaurant-photos img {
+    width: 30vw !important;
+    height: 30vw !important;
+    padding: calc(1vw - 6px);
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1000px) {
+  .home-menu__restaurant-photos img {
+    width: 25vw !important;
+    height: 25vw !important;
+    padding: calc(1vw - 6px);
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .home-menu__restaurant-photos img {
+    width: 20vw !important;
+    height: 20vw !important;
+    padding: calc(1vw - 6px);
+    margin: 0 auto;
+  }
+}
 .home-menu__acheivements {
   margin-top: 50px;
   background-color: #222222;
@@ -1575,14 +1644,61 @@ Common breakpoints:
   line-height: 21.82px;
   font-weight: 700;
 }
+@media (min-width: 720px) {
+  .home-menu__acheivements {
+    height: 348px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
 .home-menu__acheivements img {
   width: 180px;
 }
 .home-menu__acheivements-item {
   margin-bottom: 50px;
 }
+@media (min-width: 720px) {
+  .home-menu__acheivements-item {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .home-menu__acheivements-item {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .home-menu__acheivements-item {
+    padding: 0;
+    margin: 0;
+  }
+}
 .home-menu__acheivements :last-child {
   margin-bottom: 10px;
+}
+@media (min-width: 720px) {
+  .home-menu__acheivements :last-child {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .home-menu__acheivements :last-child {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .home-menu__acheivements :last-child {
+    padding: 0;
+    margin: 0;
+  }
 }
 .home-menu__slider-button-prev {
   top: var(--swiper-navigation-top-offset, 90%) !important;
