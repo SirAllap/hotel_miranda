@@ -20,9 +20,24 @@ icon_close.addEventListener('click', () => {
 window.onload = () => {
     window.pageYOffset > 99 ? header.classList.add('header--hide-on-top') :
         header.classList.remove('header--hide-on-top')
+    if (window.innerWidth >= 1000) {
+        console.log('im a desktop')
+        runDesktopView()
+        destroyFeaturesSwiper()
+    } else {
+        console.log('im a small device')
+        runDevicesView()
+        runFeaturesSwiper()
+    }
+    if (window.innerWidth >= 720) {
+        console.log('im a medium device')
+        destroyRestaurantSwiper()
+    } else {
+        runRestaurantSwiper()
+    }
 }
 
-window.onresize = function () {
+window.onresize = () => {
     if (window.innerWidth >= 1000) {
         runDesktopView()
         destroyFeaturesSwiper()
@@ -71,8 +86,8 @@ const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
     },
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next-rooms',
+        prevEl: '.swiper-button-prev-rooms',
     },
     // Breakpoints
     breakpoints: {
@@ -172,7 +187,7 @@ const swiperRoomsCards = new Swiper('.swiper-rooms-cards', {
     pagination: {
         el: ".swiper-pagination-rooms-cards",
         clickable: true,
-        renderBullet: function (index, className) {
+        renderBullet: (index, className) => {
             return '<span class="' + className + '">' + (index + 1) + "</span>"
         },
     },
