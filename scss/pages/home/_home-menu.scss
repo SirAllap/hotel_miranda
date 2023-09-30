@@ -2,21 +2,14 @@
     @include desktop {
         margin: 0 auto;
         max-width: 1000px;
+        overflow: visible;
     }
     @include xl {
         margin: 0 auto;
         max-width: 1188px;
+        overflow: visible;
     }
     overflow: clip;
-    @include md {
-        overflow: visible;
-    }
-    @include desktop {
-        overflow: visible;
-    }
-    @include xl {
-        overflow: visible;
-    }
     padding: 20px;
     margin-bottom: 60px;
     &__food-items img {
@@ -61,7 +54,19 @@
         height: 470px;
     }
     &__food-item {
+        min-width: 460px;
         margin-bottom: 15px;
+        p {
+            width: 284px;
+        }
+        &:hover {
+            color: #fff;
+            box-sizing: border-box;
+            background-color: #222;
+        }
+    }
+    &__menu-item-text {
+        margin: auto 0 auto 20px;
     }
     &__restaurant-photos {
         margin: 40px;

@@ -16,7 +16,6 @@ icon_close.addEventListener('click', () => {
     drop_down.classList.toggle('show')
 })
 
-
 window.onload = () => {
     window.pageYOffset > 99 ? header.classList.add('header--hide-on-top') :
         header.classList.remove('header--hide-on-top')
@@ -103,9 +102,6 @@ const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
     },
 })
 
-
-
-// window.onload = function () { destroyFeaturesSwiper() }
 let swiperFeatures
 const destroyFeaturesSwiper = () => {
     if (swiperFeatures !== undefined) swiperFeatures.destroy(true, true)
@@ -117,6 +113,7 @@ const runFeaturesSwiper = () => {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
+        slidesPerView: 1,
         spaceBetween: 40,
         // Pagination dots
         pagination: {
@@ -157,17 +154,22 @@ const runRestaurantSwiper = () => {
     })
 }
 
-
-
 const swiperFoodMenu = new Swiper('.swiper-food-menu', {
     // Optional parameters
     direction: 'horizontal',
+    slidesPerView: 1,
     loop: false,
     spaceBetween: 40,
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        1000: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+        },
     },
 })
 const swiperFunFact = new Swiper('.swiper-fun-fact', {
@@ -207,16 +209,3 @@ const swiperDetailsCards = new Swiper('.swiper-details-cards', {
         prevEl: '.swiper-button-prev',
     },
 })
-
-
-
-// const breakpoint = window.matchMedia("(min-width:31.25em)")
-
-// // keep track of swiper instances to destroy later
-// let mySwiper
-
-// const breakpointChecker = function () { console.log('constantly checking') }
-
-// breakpoint.addListener(breakpointChecker)()
-
-// // kickstart

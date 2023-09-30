@@ -5,7 +5,6 @@ html,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: all 0.2s ease-in-out 0s;
 }
 
 body {
@@ -1574,26 +1573,13 @@ Common breakpoints:
   .home-menu {
     margin: 0 auto;
     max-width: 1000px;
+    overflow: visible;
   }
 }
 @media (min-width: 1200px) {
   .home-menu {
     margin: 0 auto;
     max-width: 1188px;
-  }
-}
-@media (min-width: 720px) {
-  .home-menu {
-    overflow: visible;
-  }
-}
-@media (min-width: 1000px) {
-  .home-menu {
-    overflow: visible;
-  }
-}
-@media (min-width: 1200px) {
-  .home-menu {
     overflow: visible;
   }
 }
@@ -1641,7 +1627,19 @@ Common breakpoints:
   height: 470px;
 }
 .home-menu__food-item {
+  min-width: 460px;
   margin-bottom: 15px;
+}
+.home-menu__food-item p {
+  width: 284px;
+}
+.home-menu__food-item:hover {
+  color: #fff;
+  box-sizing: border-box;
+  background-color: #222;
+}
+.home-menu__menu-item-text {
+  margin: auto 0 auto 20px;
 }
 .home-menu__restaurant-photos {
   margin: 40px;
