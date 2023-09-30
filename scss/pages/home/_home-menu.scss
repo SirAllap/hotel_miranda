@@ -1,6 +1,4 @@
 .home-menu {
-    @include md {
-    }
     @include desktop {
         margin: 0 auto;
         max-width: 1000px;
@@ -10,6 +8,15 @@
         max-width: 1188px;
     }
     overflow: clip;
+    @include md {
+        overflow: visible;
+    }
+    @include desktop {
+        overflow: visible;
+    }
+    @include xl {
+        overflow: visible;
+    }
     padding: 20px;
     margin-bottom: 60px;
     &__food-items img {
@@ -18,31 +25,30 @@
         object-fit: cover;
     }
     &__donut-img {
+        border: 1px solid red;
         width: 120px;
         height: 120px;
         margin-left: 100%;
         float: right;
         margin-right: -50px;
-        @include md {
-            width: 229px;
-            height: 229px;
-            margin: 0;
-            padding: 0;
-            float: none;
-        }
         @include desktop {
             width: 229px;
             height: 229px;
             margin: 0;
             padding: 0;
             float: none;
+            position: relative;
+            right: 120px;
         }
-        @include xl {
+        @include xxxl {
             width: 229px;
             height: 229px;
             margin: 0;
             padding: 0;
             float: none;
+            position: relative;
+            right: 300px;
+            top: 30px;
         }
     }
     &__icon-text {

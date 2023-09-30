@@ -75,6 +75,12 @@ Common breakpoints:
     margin-left: 50%;
     transform: translate(-50%, 0);
   }
+  .header--desktop {
+    margin-top: 40px;
+  }
+  .header--hide-on-top {
+    margin-top: -150px;
+  }
 }
 @media (min-width: 1000px) {
   .header__drop-down-menu {
@@ -186,7 +192,7 @@ Common breakpoints:
   }
 }
 .header__mobile-icons-right {
-  width: 50vw;
+  width: 50%;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -1334,6 +1340,17 @@ Common breakpoints:
   width: 100%;
   object-fit: cover;
 }
+@media (min-width: 1200px) {
+  .home-rooms__services-slider-with-price {
+    max-width: 1420px;
+  }
+}
+.home-rooms__slider-button-next, .home-rooms__slider-button-prev {
+  margin: 0 30%;
+}
+.home-rooms__slider-button-next :hover, .home-rooms__slider-button-prev :hover {
+  transform: scale(1.5);
+}
 .home-rooms__services-info {
   z-index: 5;
   position: relative;
@@ -1385,6 +1402,8 @@ Common breakpoints:
   .home-rooms__intro-video {
     margin-top: 120px;
     max-height: 700px;
+    max-width: 1420px;
+    margin: 0 auto;
     background: rgb(34, 34, 34);
     background: linear-gradient(90deg, rgb(34, 34, 34) 68%, rgb(173, 157, 130) 68%);
   }
@@ -1407,7 +1426,7 @@ Common breakpoints:
 }
 @media (min-width: 1000px) {
   .home-rooms__intro-video-text {
-    margin: 110px calc(5vw - 50px);
+    margin: 110px calc(5% - 50px);
     width: 492px;
   }
   .home-rooms__intro-video-text h1 {
@@ -1426,7 +1445,7 @@ Common breakpoints:
 }
 @media (min-width: 1200px) {
   .home-rooms__intro-video-text {
-    margin: 110px calc(15vw - 90px);
+    margin: 65px calc(15% - 90px);
   }
 }
 .home-rooms__intro-video-text :first-child {
@@ -1478,13 +1497,13 @@ Common breakpoints:
   .home-rooms__intro-video-button {
     position: absolute;
     bottom: 20px;
-    left: calc(6vw - 45px);
+    left: calc(6% - 45px);
     transform: translate(0%, -50%);
   }
 }
 @media (min-width: 1200px) {
   .home-rooms__intro-video-button {
-    left: calc(16vw - 85px);
+    left: calc(16% - 85px);
   }
 }
 
@@ -1563,26 +1582,33 @@ Common breakpoints:
     max-width: 1188px;
   }
 }
+@media (min-width: 720px) {
+  .home-menu {
+    overflow: visible;
+  }
+}
+@media (min-width: 1000px) {
+  .home-menu {
+    overflow: visible;
+  }
+}
+@media (min-width: 1200px) {
+  .home-menu {
+    overflow: visible;
+  }
+}
 .home-menu__food-items img {
   width: 120px;
   height: 120px;
   object-fit: cover;
 }
 .home-menu__donut-img {
+  border: 1px solid red;
   width: 120px;
   height: 120px;
   margin-left: 100%;
   float: right;
   margin-right: -50px;
-}
-@media (min-width: 720px) {
-  .home-menu__donut-img {
-    width: 229px;
-    height: 229px;
-    margin: 0;
-    padding: 0;
-    float: none;
-  }
 }
 @media (min-width: 1000px) {
   .home-menu__donut-img {
@@ -1591,15 +1617,20 @@ Common breakpoints:
     margin: 0;
     padding: 0;
     float: none;
+    position: relative;
+    right: 120px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1900px) {
   .home-menu__donut-img {
     width: 229px;
     height: 229px;
     margin: 0;
     padding: 0;
     float: none;
+    position: relative;
+    right: 300px;
+    top: 30px;
   }
 }
 .home-menu__icon-text h1 {
