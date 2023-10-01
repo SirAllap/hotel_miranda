@@ -85,8 +85,8 @@ const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
     },
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next-rooms',
-        prevEl: '.swiper-button-prev-rooms',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     // Breakpoints
     breakpoints: {

@@ -25,7 +25,15 @@
     }
     &__slider-button-next,
     &__slider-button-prev {
-        margin: 0 30%;
+        @include md {
+            margin: 0 15%;
+        }
+        @include desktop {
+            margin: 0 25%;
+        }
+        @include xl {
+            margin: 0 30%;
+        }
         :hover {
             transform: scale(1.5);
         }
