@@ -159,7 +159,7 @@
     }
     &__card {
         margin-top: 40px;
-        height: 600px;
+        min-height: 500px;
         box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
         max-width: 270px;
         margin: 0 auto;
@@ -184,6 +184,12 @@
                 bottom: 0px;
                 margin-right: 30px;
                 margin-left: 20px;
+            }
+        }
+        &--bottomcard {
+            margin-top: -50px;
+            @include desktop {
+                margin-top: 0px;
             }
         }
     }
