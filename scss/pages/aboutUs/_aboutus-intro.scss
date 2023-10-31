@@ -39,6 +39,32 @@
     &__video-services {
         margin-top: 60px;
         padding: 20px;
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+        @include md {
+            margin: 90px auto;
+            width: 80%;
+            iframe {
+                height: 500px;
+            }
+        }
+        @include desktop {
+            padding: 0px;
+            margin: 90px auto;
+            width: 60%;
+            iframe {
+                height: 500px;
+            }
+        }
+        @include xl {
+            margin: 90px auto;
+            width: 1172px;
+            iframe {
+                height: 700px;
+            }
+        }
     }
     &__services {
         margin-top: 30px;
@@ -48,14 +74,35 @@
             line-height: 40px;
             font-weight: $soft-weight;
             margin-bottom: 60px;
+            @include desktop {
+                color: #222;
+                text-align: center;
+                font-family: Old Standard TT;
+                font-size: 4vw;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: -2.16px;
+            }
         }
     }
     &__services-card {
+        @include xl {
+            display: inline;
+            max-width: 1172px;
+        }
         img {
             width: 158px;
+            @include xl {
+                margin: 0 10px 0 10px;
+            }
+            @include xxl {
+                margin: 0 3vw 0 3vw;
+            }
         }
     }
     &__restaurant {
+        box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1);
         padding: 20px;
         margin: 20px;
         box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
@@ -63,6 +110,12 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
+            @include desktop {
+                float: left;
+                width: 530px;
+                height: 420px;
+                margin-right: 60px;
+            }
         }
         h4 {
             margin-top: 20px;
@@ -70,12 +123,49 @@
         h1 {
             font-size: 40px;
             margin-top: 20px;
+            @include xl {
+                color: #222;
+                font-family: Old Standard TT;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: -1.44px;
+            }
+            @include xl {
+                margin-top: 40px;
+            }
         }
         p {
             margin-top: 20px;
+            @include xl {
+                color: #777;
+                font-family: Archivo;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+            }
+            @include xl {
+                margin-top: 30px;
+            }
         }
         button {
             margin-top: 20px;
+            box-shadow: 0px 14px 24px 0px rgba(190, 173, 142, 0.36);
+            @include desktop {
+                margin-top: 10px;
+            }
+            @include xl {
+                margin-top: 40px;
+            }
+        }
+        @include desktop {
+            height: 460px;
+        }
+        @include xl {
+            margin: 0 auto;
+            width: 1172px;
         }
     }
 }

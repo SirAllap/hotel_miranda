@@ -5,6 +5,7 @@ html,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +36,16 @@ Common breakpoints:
   height: 100px;
   background-color: #222222;
 }
+.lock h3 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 14%;
+  padding-top: 15px;
+}
 
 .header {
   margin: 0 auto;
@@ -57,6 +68,7 @@ Common breakpoints:
     background-color: white;
     margin-left: 50%;
     transform: translate(-50%, 0);
+    transition: 0.3s all;
   }
   .header--desktop {
     margin-top: 40px;
@@ -755,25 +767,56 @@ Common breakpoints:
 }
 
 .general-features-black-card {
+  border: 1px solid red;
   padding: 30px;
-  margin-top: 40px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+}
+@media (min-width: 1000px) {
+  .general-features-black-card {
+    height: 340px !important;
+    max-width: 440px;
+  }
 }
 .general-features-black-card__features-left-img {
+  width: 70px;
+  height: 70px;
   margin-top: 60px;
+  object-fit: contain;
+}
+@media (min-width: 1000px) {
+  .general-features-black-card__features-left-img {
+    margin: 30px 0 0 30px;
+  }
+  .general-features-black-card__features-left-img:hover {
+    transform: scale(1.05);
+  }
+}
+@media (min-width: 1200px) {
+  .general-features-black-card__features-left-img {
+    margin: 60px 0 0 60px;
+  }
 }
 .general-features-black-card__features-card-text {
+  margin: 0 auto;
   width: 80%;
 }
 .general-features-black-card__features-card-text h4 {
-  color: #fff;
   margin-top: 20px;
   font-size: 30px;
 }
 .general-features-black-card__features-card-text p {
   margin-top: 10px;
-  color: #fff;
+  color: #777777;
+}
+@media (min-width: 1000px) {
+  .general-features-black-card__features-card-text h4 {
+    margin-top: 0px;
+    font-size: 30px;
+  }
+  .general-features-black-card__features-card-text p {
+    margin-top: 0px;
+    color: #777777;
+  }
 }
 
 .rating-black {
@@ -1887,6 +1930,38 @@ Common breakpoints:
   margin-top: 60px;
   padding: 20px;
 }
+.aboutus-intro__video-services iframe {
+  width: 100%;
+  height: 200px;
+}
+@media (min-width: 720px) {
+  .aboutus-intro__video-services {
+    margin: 90px auto;
+    width: 80%;
+  }
+  .aboutus-intro__video-services iframe {
+    height: 500px;
+  }
+}
+@media (min-width: 1000px) {
+  .aboutus-intro__video-services {
+    padding: 0px;
+    margin: 90px auto;
+    width: 60%;
+  }
+  .aboutus-intro__video-services iframe {
+    height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutus-intro__video-services {
+    margin: 90px auto;
+    width: 1172px;
+  }
+  .aboutus-intro__video-services iframe {
+    height: 700px;
+  }
+}
 .aboutus-intro__services {
   margin-top: 30px;
   text-align: center;
@@ -1897,10 +1972,39 @@ Common breakpoints:
   font-weight: 400;
   margin-bottom: 60px;
 }
+@media (min-width: 1000px) {
+  .aboutus-intro__services h1 {
+    color: #222;
+    text-align: center;
+    font-family: Old Standard TT;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2.16px;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutus-intro__services-card {
+    display: inline;
+    max-width: 1172px;
+  }
+}
 .aboutus-intro__services-card img {
   width: 158px;
 }
+@media (min-width: 1200px) {
+  .aboutus-intro__services-card img {
+    margin: 0 10px 0 10px;
+  }
+}
+@media (min-width: 1500px) {
+  .aboutus-intro__services-card img {
+    margin: 0 3vw 0 3vw;
+  }
+}
 .aboutus-intro__restaurant {
+  box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1);
   padding: 20px;
   margin: 20px;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
@@ -1910,6 +2014,14 @@ Common breakpoints:
   height: 250px;
   object-fit: cover;
 }
+@media (min-width: 1000px) {
+  .aboutus-intro__restaurant img {
+    float: left;
+    width: 530px;
+    height: 420px;
+    margin-right: 60px;
+  }
+}
 .aboutus-intro__restaurant h4 {
   margin-top: 20px;
 }
@@ -1917,11 +2029,64 @@ Common breakpoints:
   font-size: 40px;
   margin-top: 20px;
 }
+@media (min-width: 1200px) {
+  .aboutus-intro__restaurant h1 {
+    color: #222;
+    font-family: Old Standard TT;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.44px;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutus-intro__restaurant h1 {
+    margin-top: 40px;
+  }
+}
 .aboutus-intro__restaurant p {
   margin-top: 20px;
 }
+@media (min-width: 1200px) {
+  .aboutus-intro__restaurant p {
+    color: #777;
+    font-family: Archivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutus-intro__restaurant p {
+    margin-top: 30px;
+  }
+}
 .aboutus-intro__restaurant button {
   margin-top: 20px;
+  box-shadow: 0px 14px 24px 0px rgba(190, 173, 142, 0.36);
+}
+@media (min-width: 1000px) {
+  .aboutus-intro__restaurant button {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutus-intro__restaurant button {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 1000px) {
+  .aboutus-intro__restaurant {
+    height: 460px;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutus-intro__restaurant {
+    margin: 0 auto;
+    width: 1172px;
+  }
 }
 
 .aboutus-facilities {
@@ -1931,18 +2096,37 @@ Common breakpoints:
   color: #fff;
 }
 .aboutus-facilities__text-container {
+  padding-top: 20px;
+  margin-bottom: 60px;
   text-align: center;
 }
-.aboutus-facilities__text-container :first-child {
-  font-weight: 400;
-  color: #fff;
-  padding-top: 40px;
-  margin-bottom: 30px;
+.aboutus-facilities__text-container h4 {
+  margin-bottom: 20px;
 }
-.aboutus-facilities__swiper {
-  max-width: 350px;
-  width: 90%;
-  max-height: 430px;
+@media (min-width: 1000px) {
+  .aboutus-facilities {
+    max-width: 1929px !important;
+    height: 1149px;
+    flex-wrap: wrap !important;
+    max-width: 1000px;
+    max-height: 911px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .aboutus-facilities .swiper-wrapper {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutus-facilities {
+    flex-wrap: wrap !important;
+    max-height: 911px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .aboutus-facilities .swiper-wrapper {
+    flex-wrap: wrap;
+  }
 }
 .aboutus-facilities__swiper-pagination {
   position: relative !important;
@@ -1950,6 +2134,23 @@ Common breakpoints:
   --swiper-pagination-color: #bead8e;
   --swiper-pagination-bullet-inactive-color: #333333;
   --swiper-pagination-bullet-inactive-opacity: 0.7;
+}
+
+@media (min-width: 1000px) {
+  .swiper-slide-card {
+    margin: 0;
+    padding: 0;
+    height: 299px !important;
+    width: 320px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .swiper-slide-card {
+    margin: 0;
+    padding: 0;
+    height: 349px !important;
+    width: 370px !important;
+  }
 }
 
 .aboutus-counter {
