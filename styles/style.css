@@ -462,10 +462,11 @@ Common breakpoints:
   display: block;
   width: 216px;
   height: 60px;
+  transition: 0.3s all;
+  border: 2px transparent solid;
 }
 .button--beige {
   background-color: #bead8e;
-  border: none;
 }
 .button--beige:hover {
   background-color: #333333;
@@ -473,7 +474,6 @@ Common breakpoints:
 }
 .button--beige-no-animation {
   background-color: #bead8e;
-  border: none;
 }
 .button--beige-no-animation:hover {
   background-color: #333333;

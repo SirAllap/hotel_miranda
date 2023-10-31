@@ -8,9 +8,10 @@
     display: block;
     width: 216px;
     height: 60px;
+    transition: 0.3s all;
+    border: 2px transparent solid;
     &--beige {
         background-color: $color-beish;
-        border: none;
         &:hover {
             background-color: $color-midStrongGreyBack;
             border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
@@ -18,7 +19,6 @@
     }
     &--beige-no-animation {
         background-color: $color-beish;
-        border: none;
         &:hover {
             background-color: $color-midStrongGreyBack;
             border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
