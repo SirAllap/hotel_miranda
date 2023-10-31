@@ -6,20 +6,30 @@
     background-size: auto 100%;
 
     @include desktop {
-        border: 1px solid red;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         max-width: 1000px;
         margin: 0 auto;
         padding: 0;
+        background-repeat: repeat;
     }
     @include xl {
-        max-width: 1188px;
+        max-width: 100%;
         margin: 0 auto;
         padding: 0;
     }
-
+    &__external-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        min-width: 1000px;
+        margin: 0 auto;
+        @include xl {
+            min-width: 1188px;
+        }
+    }
     &__logo {
         max-width: 245px;
     }
@@ -75,6 +85,9 @@
         line-height: 24px;
         color: $color-strongerGreyBack;
         margin: 20px 0 40px 0;
+        @include desktop {
+            width: 250px;
+        }
     }
     &__contact-us-element {
         width: 200px;
@@ -101,31 +114,43 @@
             font-weight: 300;
         }
     }
-    &__copyright {
-        border: 1px solid red;
-        margin: auto;
-        padding: 15px 0 15px 20px;
-        color: #222222;
-        font-family: $robo-font;
-        font-weight: $strong-weight;
-        font-size: 16px;
-        width: 100%;
-        height: 93px;
-        background-color: #f8f8f8;
+}
+.copyright {
+    margin: auto;
+    padding: 15px 0 15px 20px;
+    color: #222222;
+    font-family: $robo-font;
+    font-weight: $strong-weight;
+    font-size: 16px;
+    height: 93px;
+    background-color: #f8f8f8;
+    @include desktop {
+        flex-wrap: wrap !important;
+        min-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    @include xl {
+        flex-wrap: wrap !important;
+        min-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    &__inner-content {
         @include desktop {
-            flex-wrap: wrap !important;
-            max-width: 1000px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             margin: 0 auto;
-            padding: 0;
-        }
-        @include xl {
-            flex-wrap: wrap !important;
-            max-width: 1188px;
-            margin: 0 auto;
-            padding: 0;
+            width: 1188px;
+            height: 100%;
         }
     }
-    &__copyright p {
+    p {
         margin-bottom: 20px;
+        @include desktop {
+            margin-bottom: 0px;
+        }
     }
 }
