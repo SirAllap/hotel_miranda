@@ -55,6 +55,7 @@
     &__food-item {
         min-width: 460px;
         margin-bottom: 15px;
+        transition: 0.3s;
         p {
             width: 284px;
         }
@@ -62,6 +63,7 @@
             color: #fff;
             box-sizing: border-box;
             background-color: #222;
+            scale: 1.01;
         }
     }
     &__menu-item-text {

@@ -30,9 +30,11 @@
 }
 
 .swiper-slide-card {
-    @include md {
-    }
     @include desktop {
+        transition: all 0.5s !important;
+        &:hover {
+            scale: 1.05;
+        }
         margin: 0;
         padding: 0;
         height: 299px !important;

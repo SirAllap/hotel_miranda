@@ -318,13 +318,15 @@ Common breakpoints:
     padding: 0;
   }
 }
-.footer__external-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-  min-width: 1000px;
-  margin: 0 auto;
+@media (min-width: 1000px) {
+  .footer__external-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    min-width: 1000px;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 1200px) {
   .footer__external-container {
@@ -349,6 +351,9 @@ Common breakpoints:
 .footer__social-links img {
   width: 40px;
   height: 40px;
+}
+.footer__social-links img:hover {
+  scale: 1.05;
 }
 .footer__services-title {
   width: 419px;
@@ -451,7 +456,7 @@ Common breakpoints:
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    width: 1188px;
+    max-width: 1188px;
     height: 100%;
   }
 }
@@ -462,6 +467,41 @@ Common breakpoints:
   .copyright p {
     margin-bottom: 0px;
   }
+}
+
+#social-fb {
+  transition: all 0.3s;
+}
+#social-fb:hover {
+  content: url("../../../assets/images/social_btn/fb_social_gold.png");
+}
+
+#social-tw {
+  transition: all 0.3s;
+}
+#social-tw:hover {
+  content: url("../../../assets/images/social_btn/tw_social_gold.png");
+}
+
+#social-be {
+  transition: all 0.3s;
+}
+#social-be:hover {
+  content: url("../../../assets/images/social_btn/be_social_gold.png");
+}
+
+#social-in {
+  transition: all 0.3s;
+}
+#social-in:hover {
+  content: url("../../../assets/images/social_btn/in_social_gold.png");
+}
+
+#social-yt {
+  transition: all 0.3s;
+}
+#social-yt:hover {
+  content: url("../../../assets/images/social_btn/yt_social_gold.png");
 }
 
 .button {
@@ -692,9 +732,6 @@ Common breakpoints:
   .general-features-card__features-left-img {
     margin: 30px 0 0 30px;
   }
-  .general-features-card__features-left-img:hover {
-    transform: scale(1.05);
-  }
 }
 @media (min-width: 1200px) {
   .general-features-card__features-left-img {
@@ -767,15 +804,8 @@ Common breakpoints:
 }
 
 .general-features-black-card {
-  border: 1px solid red;
   padding: 30px;
   margin-bottom: 20px;
-}
-@media (min-width: 1000px) {
-  .general-features-black-card {
-    height: 340px !important;
-    max-width: 440px;
-  }
 }
 .general-features-black-card__features-left-img {
   width: 70px;
@@ -786,9 +816,6 @@ Common breakpoints:
 @media (min-width: 1000px) {
   .general-features-black-card__features-left-img {
     margin: 30px 0 0 30px;
-  }
-  .general-features-black-card__features-left-img:hover {
-    transform: scale(1.05);
   }
 }
 @media (min-width: 1200px) {
@@ -1686,10 +1713,14 @@ Common breakpoints:
 
 @media (min-width: 1000px) {
   .swiper-slide-card {
+    transition: all 0.5s !important;
     margin: 0;
     padding: 0;
     height: 299px !important;
     width: 320px !important;
+  }
+  .swiper-slide-card:hover {
+    scale: 1.05;
   }
 }
 @media (min-width: 1200px) {
@@ -1765,6 +1796,7 @@ Common breakpoints:
 .home-menu__food-item {
   min-width: 460px;
   margin-bottom: 15px;
+  transition: 0.3s;
 }
 .home-menu__food-item p {
   width: 284px;
@@ -1773,6 +1805,7 @@ Common breakpoints:
   color: #fff;
   box-sizing: border-box;
   background-color: #222;
+  scale: 1.01;
 }
 .home-menu__menu-item-text {
   margin: auto 0 auto 20px;
@@ -2106,10 +2139,9 @@ Common breakpoints:
 @media (min-width: 1000px) {
   .aboutus-facilities {
     max-width: 1929px !important;
-    height: 1149px;
     flex-wrap: wrap !important;
-    max-width: 1000px;
-    max-height: 911px;
+    max-width: 1929px !important;
+    height: 1049px;
     margin: 0 auto;
     padding: 0;
   }
@@ -2120,7 +2152,6 @@ Common breakpoints:
 @media (min-width: 1200px) {
   .aboutus-facilities {
     flex-wrap: wrap !important;
-    max-height: 911px;
     margin: 0 auto;
     padding: 0;
   }
@@ -2135,13 +2166,22 @@ Common breakpoints:
   --swiper-pagination-bullet-inactive-color: #333333;
   --swiper-pagination-bullet-inactive-opacity: 0.7;
 }
+@media (min-width: 1000px) {
+  .aboutus-facilities__swiper-pagination {
+    --swiper-pagination-bullet-inactive-opacity: 0;
+  }
+}
 
 @media (min-width: 1000px) {
   .swiper-slide-card {
-    margin: 0;
+    transition: all 0.5s !important;
+    margin: 10px !important;
     padding: 0;
     height: 299px !important;
     width: 320px !important;
+  }
+  .swiper-slide-card:hover {
+    scale: 1.05;
   }
 }
 @media (min-width: 1200px) {
@@ -2151,6 +2191,10 @@ Common breakpoints:
     height: 349px !important;
     width: 370px !important;
   }
+}
+
+.swiper-features {
+  max-width: 1178px;
 }
 
 .aboutus-counter {
@@ -2241,6 +2285,16 @@ Common breakpoints:
   text-align: center;
   padding: 20px;
 }
+@media (min-width: 1000px) {
+  .rooms-cards {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1000px) {
+  .rooms-cards__wrapper {
+    max-width: 1170px;
+  }
+}
 .rooms-cards img {
   width: 100%;
 }
@@ -2275,6 +2329,12 @@ Common breakpoints:
   color: inherit;
 }
 
+@media (min-width: 1000px) {
+  .swiper-rooms-cards {
+    max-width: 1170px;
+  }
+}
+
 #pagination-rooms-cards {
   --swiper-pagination-bullet-border-radius: 0px;
   --swiper-pagination-bullet-size: 20px;
@@ -2287,17 +2347,6 @@ Common breakpoints:
   color: white;
 }
 
-/*
-  --swiper-pagination-color: var(--swiper-theme-color);
-  --swiper-pagination-bullet-size: 8px;
-  --swiper-pagination-bullet-width: 8px;
-  --swiper-pagination-bullet-height: 8px;
-  --swiper-pagination-bullet-inactive-color: #000;
-  --swiper-pagination-bullet-inactive-opacity: 0.2;
-  --swiper-pagination-bullet-opacity: 1;
-  --swiper-pagination-bullet-horizontal-gap: 4px;
-  --swiper-pagination-bullet-vertical-gap: 6px;
-  */
 .offers-intro__head-section {
   display: flex;
   flex-direction: column;
