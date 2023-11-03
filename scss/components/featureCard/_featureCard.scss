@@ -1,17 +1,12 @@
 .general-features-card {
     padding: 30px;
     margin-bottom: 20px;
-    @include xl {
-    }
     &__features-left-img {
         width: 70px;
         height: 70px;
         margin-top: 60px;
         object-fit: contain;
         @include desktop {
-            &:hover {
-                transform: scale(1.05);
-            }
             margin: 30px 0 0 30px;
         }
         @include xl {
@@ -79,22 +74,14 @@
 }
 
 .general-features-black-card {
-    border: 1px solid red;
     padding: 30px;
     margin-bottom: 20px;
-    @include desktop {
-        height: 340px !important;
-        max-width: 440px;
-    }
     &__features-left-img {
         width: 70px;
         height: 70px;
         margin-top: 60px;
         object-fit: contain;
         @include desktop {
-            &:hover {
-                transform: scale(1.05);
-            }
             margin: 30px 0 0 30px;
         }
         @include xl {
