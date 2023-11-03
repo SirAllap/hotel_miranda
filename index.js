@@ -197,6 +197,13 @@ const swiperRoomsCards = new Swiper('.swiper-rooms-cards', {
         nextEl: '.swiper-button-next-rooms-cards',
         prevEl: '.swiper-button-prev-rooms-cards',
     },
+    // Breakpoints
+    breakpoints: {
+        1000: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
 })
 const swiperDetailsCards = new Swiper('.swiper-details-cards', {
     // Optional parameters
