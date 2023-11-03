@@ -43,8 +43,9 @@ Common breakpoints:
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-left: 14%;
+  max-width: 1420px;
   padding-top: 15px;
+  margin: 0 auto;
 }
 
 .header {
@@ -1694,9 +1695,6 @@ Common breakpoints:
     margin: 0 auto;
     padding: 0;
   }
-  .home-facilities .swiper-wrapper {
-    flex-wrap: wrap;
-  }
 }
 @media (min-width: 1200px) {
   .home-facilities {
@@ -1729,6 +1727,13 @@ Common breakpoints:
     padding: 0;
     height: 349px !important;
     width: 370px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper-pagination {
+    --swiper-pagination-color: transparent;
+    --swiper-pagination-bullet-inactive-opacity: 0;
   }
 }
 
@@ -1935,9 +1940,21 @@ Common breakpoints:
 .aboutus-intro__head-section h1 {
   margin-top: 20px;
 }
+@media (min-width: 1000px) {
+  .aboutus-intro__head-section h1 {
+    margin: 0 auto 0 auto;
+    width: 1170px;
+  }
+}
 .aboutus-intro__head-section h5 {
   color: #ffffff;
   font-weight: 300;
+}
+@media (min-width: 1000px) {
+  .aboutus-intro__head-section h5 {
+    margin: 0 auto 20px auto;
+    width: 1170px;
+  }
 }
 .aboutus-intro__breadcrumbs {
   position: absolute;
@@ -2168,24 +2185,25 @@ Common breakpoints:
 }
 @media (min-width: 1000px) {
   .aboutus-facilities__swiper-pagination {
+    --swiper-pagination-color: transparent;
     --swiper-pagination-bullet-inactive-opacity: 0;
   }
 }
 
 @media (min-width: 1000px) {
-  .swiper-slide-card {
+  .swiper-slide {
     transition: all 0.5s !important;
-    margin: 10px !important;
+    margin: 0;
     padding: 0;
     height: 299px !important;
     width: 320px !important;
   }
-  .swiper-slide-card:hover {
+  .swiper-slide:hover {
     scale: 1.05;
   }
 }
 @media (min-width: 1200px) {
-  .swiper-slide-card {
+  .swiper-slide {
     margin: 0;
     padding: 0;
     height: 349px !important;
@@ -2194,6 +2212,7 @@ Common breakpoints:
 }
 
 .swiper-features {
+  margin: 0 auto;
   max-width: 1178px;
 }
 
@@ -2255,9 +2274,21 @@ Common breakpoints:
 .rooms-intro__head-section h1 {
   margin-top: 20px;
 }
+@media (min-width: 1000px) {
+  .rooms-intro__head-section h1 {
+    margin: 0 auto 0 auto;
+    width: 1170px;
+  }
+}
 .rooms-intro__head-section h5 {
   color: #ffffff;
   font-weight: 300;
+}
+@media (min-width: 1000px) {
+  .rooms-intro__head-section h5 {
+    margin: 0 auto 20px auto;
+    width: 1170px;
+  }
 }
 .rooms-intro__breadcrumbs {
   position: absolute;
@@ -2359,9 +2390,21 @@ Common breakpoints:
 .offers-intro__head-section h1 {
   margin-top: 20px;
 }
+@media (min-width: 1000px) {
+  .offers-intro__head-section h1 {
+    margin: 0 auto 0 auto;
+    width: 1170px;
+  }
+}
 .offers-intro__head-section h5 {
   color: #ffffff;
   font-weight: 300;
+}
+@media (min-width: 1000px) {
+  .offers-intro__head-section h5 {
+    margin: 0 auto 20px auto;
+    width: 1170px;
+  }
 }
 .offers-intro__breadcrumbs {
   position: absolute;
@@ -2529,9 +2572,21 @@ Common breakpoints:
 .contact-intro__head-section h1 {
   margin-top: 20px;
 }
+@media (min-width: 1000px) {
+  .contact-intro__head-section h1 {
+    margin: 0 auto 0 auto;
+    width: 1170px;
+  }
+}
 .contact-intro__head-section h5 {
   color: #ffffff;
   font-weight: 300;
+}
+@media (min-width: 1000px) {
+  .contact-intro__head-section h5 {
+    margin: 0 auto 20px auto;
+    width: 1170px;
+  }
 }
 .contact-intro__breadcrumbs {
   position: absolute;
