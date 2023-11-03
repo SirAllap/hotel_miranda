@@ -8,9 +8,6 @@
         text-align: center;
     }
     @include desktop {
-        .swiper-wrapper {
-            flex-wrap: wrap;
-        }
         flex-wrap: wrap !important;
         max-width: 1000px;
         max-height: 911px;
@@ -45,5 +42,11 @@
         padding: 0;
         height: 349px !important;
         width: 370px !important;
+    }
+}
+.swiper-pagination {
+    @include xl {
+        --swiper-pagination-color: transparent;
+        --swiper-pagination-bullet-inactive-opacity: 0;
     }
 }
