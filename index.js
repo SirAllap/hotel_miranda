@@ -37,7 +37,7 @@ window.onload = () => {
 }
 
 window.onresize = () => {
-    if (window.innerWidth >= 1000) {
+    if (window.innerWidth >= 1200) {
         runDesktopView()
         destroyFeaturesSwiper()
     } else {
@@ -114,7 +114,6 @@ const runFeaturesSwiper = () => {
         direction: 'horizontal',
         loop: true,
         slidesPerView: 1,
-        spaceBetween: 40,
         // Pagination dots
         pagination: {
             el: ".swiper-pagination",
@@ -122,16 +121,13 @@ const runFeaturesSwiper = () => {
         // Breakpoints
         breakpoints: {
             720: {
-                slidesPerView: 1.5,
+                slidesPerView: 2,
+                spaceBetween: 10,
             },
             1000: {
-                slidesPerView: 2.1,
-                spaceBetween: 0,
-            },
-            1200: {
-                slidesPerView: 2.7,
-                spaceBetween: 0,
-            },
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
         },
     })
 }
