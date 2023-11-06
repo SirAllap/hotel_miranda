@@ -2387,6 +2387,13 @@ Common breakpoints:
 .offers-intro__offer-card {
   margin-bottom: 40px;
 }
+@media (min-width: 1000px) {
+  .offers-intro__offer-card-image {
+    margin: 0 auto;
+    max-width: 1170px;
+    border: 1px solid red;
+  }
+}
 .offers-intro__offer-card-image img {
   object-fit: cover;
   width: 100%;
