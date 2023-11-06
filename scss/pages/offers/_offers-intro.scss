@@ -51,6 +51,11 @@
         margin-bottom: 40px;
     }
     &__offer-card-image {
+        @include desktop {
+            margin: 0 auto;
+            max-width: 1170px;
+            border: 1px solid red;
+        }
         img {
             object-fit: cover;
             width: 100%;
