@@ -16,40 +16,30 @@ icon_close.addEventListener('click', () => {
     drop_down.classList.toggle('show')
 })
 
-window.onload = () => {
+window.addEventListener('load', () => {
     window.pageYOffset > 99 ? header.classList.add('header--hide-on-top') :
         header.classList.remove('header--hide-on-top')
-    if (window.innerWidth >= 1000) {
-        console.log('im a desktop')
-        runDesktopView()
-        destroyFeaturesSwiper()
-    } else {
-        console.log('im a small device')
-        runDevicesView()
-        runFeaturesSwiper()
-    }
-    if (window.innerWidth >= 720) {
-        console.log('im a medium device')
-        destroyRestaurantSwiper()
-    } else {
-        runRestaurantSwiper()
-    }
-}
-
-window.onresize = () => {
     if (window.innerWidth >= 1200) {
         runDesktopView()
         destroyFeaturesSwiper()
-    } else {
-        runDevicesView()
-        runFeaturesSwiper()
-    }
-    if (window.innerWidth >= 720) {
+    } else if (window.innerWidth >= 720) {
         destroyRestaurantSwiper()
     } else {
-        runRestaurantSwiper()
+        runDevicesView()
     }
-}
+})
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1200) {
+        runDesktopView()
+        destroyFeaturesSwiper()
+    } else if (window.innerWidth >= 720) {
+        destroyRestaurantSwiper()
+    }
+    else {
+        runDevicesView()
+    }
+})
 
 const runDesktopView = () => {
     header.classList.add('header--desktop')
@@ -58,23 +48,29 @@ const runDevicesView = () => {
     header.classList.remove('header--desktop')
 }
 
-window.onmousemove = (e) => {
+window.addEventListener('mousemove', (e) => {
     if (e.clientY <= 100) {
         header.classList.remove('header--hide-on-top')
     }
+})
+
+window.addEventListener('scroll', () => {
+    const verticalSizeScrollBar = window.pageYOffset
+    const shouldHideOnTop = verticalSizeScrollBar > 99
+
+    header.classList.toggle('header--hide-on-top', shouldHideOnTop)
+})
+
+function initializeSwiper(selector, options) {
+    return new Swiper(selector, options)
 }
 
-window.onscroll = () => {
-    let verticalSizeScrollBar = window.pageYOffset
-    if (verticalSizeScrollBar > 99) {
-        header.classList.add('header--hide-on-top')
-    } else {
-        header.classList.remove('header--hide-on-top')
-    }
+function destroySwiper(swiperInstance) {
+    if (swiperInstance !== undefined) swiperInstance.destroy(true, true)
 }
 
-const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
-    // Optional parameters
+// Home Rooms Swiper
+const swiperHomeRooms = initializeSwiper('.home-swiper-rooms', {
     centeredSlides: true,
     loop: true,
     slidesPerView: 1,
@@ -83,12 +79,10 @@ const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
     autoplay: {
         delay: 3000,
     },
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    // Breakpoints
     breakpoints: {
         720: {
             slidesPerView: 1.5,
@@ -102,61 +96,45 @@ const swiperHomeRooms = new Swiper('.home-swiper-rooms', {
     },
 })
 
-let swiperFeatures
-const destroyFeaturesSwiper = () => {
-    if (swiperFeatures !== undefined) swiperFeatures.destroy(true, true)
-    else runFeaturesSwiper()
-}
-
-const runFeaturesSwiper = () => {
-    swiperFeatures = new Swiper('.swiper-features', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 1,
-        // Pagination dots
-        pagination: {
-            el: ".swiper-pagination",
+// Features Swiper
+let swiperFeatures = initializeSwiper('.swiper-features', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    breakpoints: {
+        720: {
+            slidesPerView: 2,
         },
-        // Breakpoints
-        breakpoints: {
-            720: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            1000: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            }
+        1000: {
+            slidesPerView: 3,
+        }
+    },
+})
+
+// Restaurant Photos Swiper
+let swiperRestaurantPhotos = initializeSwiper('.swiper-restaurant-photos', {
+    direction: 'horizontal',
+    loop: false,
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    breakpoints: {
+        1000: {
+            slidesPerView: 3,
+            spaceBetween: 50,
         },
-    })
-}
+    },
+})
 
-let swiperRestaurantPhotos
-const destroyRestaurantSwiper = () => {
-    if (swiperRestaurantPhotos !== undefined) swiperRestaurantPhotos.destroy(true, true)
-    else runRestaurantSwiper()
-}
-
-const runRestaurantSwiper = () => {
-    swiperRestaurantPhotos = new Swiper('.swiper-restaurant-photos', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: false,
-        // Pagination dots
-        pagination: {
-            el: ".swiper-pagination",
-        },
-    })
-}
-
-const swiperFoodMenu = new Swiper('.swiper-food-menu', {
-    // Optional parameters
+// Food Menu Swiper
+const swiperFoodMenu = initializeSwiper('.swiper-food-menu', {
     direction: 'horizontal',
     slidesPerView: 1,
     loop: false,
     spaceBetween: 40,
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -168,20 +146,26 @@ const swiperFoodMenu = new Swiper('.swiper-food-menu', {
         },
     },
 })
-const swiperFunFact = new Swiper('.swiper-fun-fact', {
-    // Optional parameters
+
+// Fun Fact Swiper
+const swiperFunFact = initializeSwiper('.swiper-fun-fact', {
     direction: 'horizontal',
     loop: false,
-    // Pagination dots
     pagination: {
         el: ".swiper-pagination-fun",
     },
+    breakpoints: {
+        1000: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+    },
 })
-const swiperRoomsCards = new Swiper('.swiper-rooms-cards', {
-    // Optional parameters
+
+// Rooms Cards Swiper
+const swiperRoomsCards = initializeSwiper('.swiper-rooms-cards', {
     direction: 'horizontal',
     loop: false,
-    // Pagination dots
     pagination: {
         el: ".swiper-pagination-rooms-cards",
         clickable: true,
@@ -193,7 +177,6 @@ const swiperRoomsCards = new Swiper('.swiper-rooms-cards', {
         nextEl: '.swiper-button-next-rooms-cards',
         prevEl: '.swiper-button-prev-rooms-cards',
     },
-    // Breakpoints
     breakpoints: {
         1000: {
             slidesPerView: 3,
@@ -201,14 +184,28 @@ const swiperRoomsCards = new Swiper('.swiper-rooms-cards', {
         },
     },
 })
-const swiperDetailsCards = new Swiper('.swiper-details-cards', {
-    // Optional parameters
+
+// Details Cards Swiper
+const swiperDetailsCards = initializeSwiper('.swiper-details-cards', {
     direction: 'horizontal',
     loop: false,
-    // Pagination dots
-
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 })
+
+// Functions to destroy Swiper instances when needed
+function destroyFeaturesSwiper() {
+    if (swiperFeatures) {
+        swiperFeatures.destroy()
+        swiperFeatures = undefined
+    }
+}
+
+function destroyRestaurantSwiper() {
+    if (swiperRestaurantPhotos) {
+        swiperRestaurantPhotos.destroy()
+        swiperRestaurantPhotos = undefined
+    }
+}
