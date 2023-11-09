@@ -1,6 +1,9 @@
 .general-features-card {
     padding: 30px;
     margin-bottom: 20px;
+    @include desktop {
+        margin: 10px !important;
+    }
     &__features-left-img {
         width: 70px;
         height: 70px;
