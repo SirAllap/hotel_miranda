@@ -74,7 +74,7 @@ const swiperHomeRooms = initializeSwiper('.home-swiper-rooms', {
     centeredSlides: true,
     loop: true,
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 10,
     speed: 500,
     autoplay: {
         delay: 3000,
@@ -88,10 +88,40 @@ const swiperHomeRooms = initializeSwiper('.home-swiper-rooms', {
             slidesPerView: 1.5,
         },
         1000: {
-            slidesPerView: 2.1,
+            slidesPerView: 1.5,
         },
         1200: {
-            slidesPerView: 2.7,
+            slidesPerView: 2,
+        },
+    },
+})
+
+// Offer Rooms Swiper
+const swiperRoomsOffer = initializeSwiper('.swiper-rooms-offer', {
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 500,
+    autoplay: {
+        delay: 3000,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        720: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
+        1000: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
         },
     },
 })
