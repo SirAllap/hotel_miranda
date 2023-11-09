@@ -10,6 +10,7 @@
     height: 60px;
     transition: 0.3s all;
     border: 2px transparent solid;
+    cursor: pointer;
     &--beige {
         background-color: $color-beish;
         &:hover {
