@@ -32,7 +32,7 @@ Common breakpoints:
 }
 
 .lock {
-  min-width: 100vw;
+  min-width: 100%;
   height: 100px;
   background-color: #222222;
 }
@@ -517,6 +517,7 @@ Common breakpoints:
   height: 60px;
   transition: 0.3s all;
   border: 2px transparent solid;
+  cursor: pointer;
 }
 .button--beige {
   background-color: #bead8e;
@@ -722,6 +723,11 @@ Common breakpoints:
 .general-features-card {
   padding: 30px;
   margin-bottom: 20px;
+}
+@media (min-width: 1000px) {
+  .general-features-card {
+    margin: 10px !important;
+  }
 }
 .general-features-card__features-left-img {
   width: 70px;
@@ -2101,14 +2107,6 @@ Common breakpoints:
   background-color: #222222;
   color: #fff;
 }
-.aboutus-facilities__text-container {
-  padding-top: 20px;
-  margin-bottom: 60px;
-  text-align: center;
-}
-.aboutus-facilities__text-container h4 {
-  margin-bottom: 20px;
-}
 @media (min-width: 1000px) {
   .aboutus-facilities {
     max-width: 1929px !important;
@@ -2134,36 +2132,20 @@ Common breakpoints:
     flex-wrap: wrap;
   }
 }
+.aboutus-facilities__text-container {
+  padding-top: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.aboutus-facilities__text-container h4 {
+  margin-bottom: 20px;
+}
 .aboutus-facilities__swiper-pagination {
   position: relative !important;
   bottom: -10px !important;
   --swiper-pagination-color: #bead8e;
   --swiper-pagination-bullet-inactive-color: #333333;
   --swiper-pagination-bullet-inactive-opacity: 0.7;
-}
-
-.swiper-slide-about-card {
-  min-width: 0px;
-}
-@media (min-width: 1000px) {
-  .swiper-slide-about-card {
-    transition: all 0.5s !important;
-    margin: 10px !important;
-    padding: 0;
-    height: 299px !important;
-    width: 320px !important;
-  }
-  .swiper-slide-about-card:hover {
-    scale: 1.05;
-  }
-}
-@media (min-width: 1200px) {
-  .swiper-slide-about-card {
-    margin: 0;
-    padding: 0;
-    height: 349px !important;
-    width: 370px !important;
-  }
 }
 
 .swiper-features {
@@ -2180,6 +2162,12 @@ Common breakpoints:
 .aboutus-counter h1 {
   margin-bottom: 20px;
 }
+@media (min-width: 1200px) {
+  .aboutus-counter {
+    margin: 50px auto 0 auto;
+    width: 1170px;
+  }
+}
 .aboutus-counter__illustration-img {
   width: 65px;
   height: 65px;
@@ -2188,12 +2176,27 @@ Common breakpoints:
   width: 30px;
   height: 15px;
 }
+@media (min-width: 1000px) {
+  .aboutus-counter__mini-card-wrapper {
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+  }
+}
 .aboutus-counter__mini-card {
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+@media (min-width: 1000px) {
+  .aboutus-counter__mini-card {
+    width: 25%;
+  }
 }
 .aboutus-counter__mini-card span {
   font-family: "Old Standard TT";
@@ -2207,6 +2210,12 @@ Common breakpoints:
   object-fit: cover;
   width: 100%;
   height: 250px;
+}
+@media (min-width: 1000px) {
+  .aboutus-counter__fun-fact img {
+    height: 400px;
+    margin-bottom: 50px;
+  }
 }
 .aboutus-counter__pagination {
   padding: 10px;
