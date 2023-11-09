@@ -1,1 +1,15 @@
-{}
+{
+	"name": "hotel_miranda",
+	"description": "In this sprint, your task is to create the layout of the website that users will access to obtain information and/or make reservations at Hotel Miranda.",
+	"version": "1.0.0",
+	"main": "index.js",
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"deploy": "aws s3 sync build/ s3://hotelmiranda --delete --profile sirallap",
+		"build": "rm -rf build && mkdir -p build && cp -r index.html aboutUs.html contact.html offers.html room-details.html rooms.html styles index.js assets build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
