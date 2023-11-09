@@ -7,6 +7,10 @@
     h1 {
         margin-bottom: 20px;
     }
+    @include xl {
+        margin: 50px auto 0 auto;
+        width: 1170px;
+    }
     &__illustration-img {
         width: 65px;
         height: 65px;
@@ -15,12 +19,25 @@
         width: 30px;
         height: 15px;
     }
+    &__mini-card-wrapper {
+        @include desktop {
+            margin-bottom: 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 200px;
+        }
+    }
     &__mini-card {
         margin-bottom: 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+        @include desktop {
+            width: 25%;
+        }
         span {
             font-family: $old-font;
             font-size: 60px;
@@ -34,6 +51,10 @@
         object-fit: cover;
         width: 100%;
         height: 250px;
+        @include desktop {
+            height: 400px;
+            margin-bottom: 50px;
+        }
     }
     &__pagination {
         padding: 10px;
