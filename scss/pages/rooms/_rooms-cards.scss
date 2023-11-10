@@ -44,6 +44,11 @@
         color: $color-verySoftGrey;
     }
 }
+.room-image {
+    @include desktop {
+        height: 300px;
+    }
+}
 
 .swiper-rooms-cards {
     @include desktop {
