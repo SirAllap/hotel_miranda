@@ -12,15 +12,15 @@
         }
     }
     &__services-slider-with-price {
-        // max-width: 720px;
         margin: 0 auto;
         text-align: center;
         img {
             width: 100%;
             object-fit: cover;
         }
+        // total swiper size
         @include xl {
-            max-width: 1420px;
+            // max-width: 1420px;
         }
     }
     &__slider-button-next,
@@ -29,13 +29,15 @@
             margin: 0 15%;
         }
         @include desktop {
-            margin: 0 25%;
+            margin: 0 15%;
+            transform: scale(1.4);
         }
         @include xl {
-            margin: 0 30%;
+            margin: 0 24.5%;
+            transform: scale(1.6);
         }
-        :hover {
-            transform: scale(1.5);
+        &:hover {
+            transform: scale(1.8);
         }
     }
     &__services-info {
@@ -43,8 +45,20 @@
         position: relative;
         top: 26px;
         max-width: 290px;
+        @include desktop {
+            max-width: 450px;
+        }
     }
     &__slider {
+        @include desktop {
+            height: 350px;
+        }
+        @include xl {
+            height: 450px;
+        }
+        @include xxl {
+            height: 550px;
+        }
         &--swiper-slidepic {
             opacity: 0.4;
             overflow: hidden;
