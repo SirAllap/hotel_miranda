@@ -1455,11 +1455,6 @@ Common breakpoints:
   width: 100%;
   object-fit: cover;
 }
-@media (min-width: 1200px) {
-  .home-rooms__services-slider-with-price {
-    max-width: 1420px;
-  }
-}
 @media (min-width: 720px) {
   .home-rooms__slider-button-next, .home-rooms__slider-button-prev {
     margin: 0 15%;
@@ -1467,22 +1462,44 @@ Common breakpoints:
 }
 @media (min-width: 1000px) {
   .home-rooms__slider-button-next, .home-rooms__slider-button-prev {
-    margin: 0 25%;
+    margin: 0 15%;
+    transform: scale(1.4);
   }
 }
 @media (min-width: 1200px) {
   .home-rooms__slider-button-next, .home-rooms__slider-button-prev {
-    margin: 0 30%;
+    margin: 0 24.5%;
+    transform: scale(1.6);
   }
 }
-.home-rooms__slider-button-next :hover, .home-rooms__slider-button-prev :hover {
-  transform: scale(1.5);
+.home-rooms__slider-button-next:hover, .home-rooms__slider-button-prev:hover {
+  transform: scale(1.8);
 }
 .home-rooms__services-info {
   z-index: 5;
   position: relative;
   top: 26px;
   max-width: 290px;
+}
+@media (min-width: 1000px) {
+  .home-rooms__services-info {
+    max-width: 450px;
+  }
+}
+@media (min-width: 1000px) {
+  .home-rooms__slider {
+    height: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .home-rooms__slider {
+    height: 450px;
+  }
+}
+@media (min-width: 1500px) {
+  .home-rooms__slider {
+    height: 550px;
+  }
 }
 .home-rooms__slider--swiper-slidepic {
   opacity: 0.4;
@@ -1813,7 +1830,15 @@ Common breakpoints:
     margin: 0 auto;
   }
 }
-.home-menu__acheivements {
+.home-menu__slider-button-prev {
+  top: var(--swiper-navigation-top-offset, 90%) !important;
+  left: var(--swiper-navigation-sides-offset, 70%) !important;
+}
+.home-menu__slider-button-next {
+  top: var(--swiper-navigation-top-offset, 90%) !important;
+}
+
+.acheivements__acheivements-container {
   margin-top: 50px;
   background-color: #222222;
   color: #999999;
@@ -1825,67 +1850,60 @@ Common breakpoints:
   font-weight: 700;
 }
 @media (min-width: 720px) {
-  .home-menu__acheivements {
+  .acheivements__acheivements-container {
     height: 348px;
     padding: 0;
-    margin: 0;
+    margin: 0 0 70px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
   }
 }
-.home-menu__acheivements img {
+.acheivements__acheivements img {
   width: 180px;
 }
-.home-menu__acheivements-item {
+.acheivements__acheivements-item {
   margin-bottom: 50px;
 }
 @media (min-width: 720px) {
-  .home-menu__acheivements-item {
+  .acheivements__acheivements-item {
     padding: 0;
     margin: 0;
   }
 }
 @media (min-width: 1000px) {
-  .home-menu__acheivements-item {
+  .acheivements__acheivements-item {
     padding: 0;
     margin: 0;
   }
 }
 @media (min-width: 1200px) {
-  .home-menu__acheivements-item {
+  .acheivements__acheivements-item {
     padding: 0;
     margin: 0;
   }
 }
-.home-menu__acheivements :last-child {
+.acheivements__acheivements :last-child {
   margin-bottom: 10px;
 }
 @media (min-width: 720px) {
-  .home-menu__acheivements :last-child {
+  .acheivements__acheivements :last-child {
     padding: 0;
     margin: 0;
   }
 }
 @media (min-width: 1000px) {
-  .home-menu__acheivements :last-child {
+  .acheivements__acheivements :last-child {
     padding: 0;
     margin: 0;
   }
 }
 @media (min-width: 1200px) {
-  .home-menu__acheivements :last-child {
+  .acheivements__acheivements :last-child {
     padding: 0;
     margin: 0;
   }
-}
-.home-menu__slider-button-prev {
-  top: var(--swiper-navigation-top-offset, 90%) !important;
-  left: var(--swiper-navigation-sides-offset, 70%) !important;
-}
-.home-menu__slider-button-next {
-  top: var(--swiper-navigation-top-offset, 90%) !important;
 }
 
 .aboutus-intro {
@@ -1935,9 +1953,19 @@ Common breakpoints:
 }
 .aboutus-intro__breadcrumbs :first-child {
   font-family: "Archivo";
+  color: black !important;
 }
 .aboutus-intro__breadcrumbs :last-child {
   color: #bead8e;
+}
+.aboutus-intro__breadcrumbs a {
+  text-decoration: none;
+  line-height: 2.5;
+  font-weight: 600;
+  cursor: pointer;
+}
+.aboutus-intro__breadcrumbs a:hover {
+  text-decoration: underline;
 }
 .aboutus-intro__video-services {
   margin-top: 60px;
@@ -2269,9 +2297,19 @@ Common breakpoints:
 }
 .rooms-intro__breadcrumbs :first-child {
   font-family: "Archivo";
+  color: black !important;
 }
 .rooms-intro__breadcrumbs :last-child {
   color: #bead8e;
+}
+.rooms-intro__breadcrumbs a {
+  text-decoration: none;
+  line-height: 2.5;
+  font-weight: 600;
+  cursor: pointer;
+}
+.rooms-intro__breadcrumbs a:hover {
+  text-decoration: underline;
 }
 
 .rooms-cards {
@@ -2385,9 +2423,19 @@ Common breakpoints:
 }
 .offers-intro__breadcrumbs :first-child {
   font-family: "Archivo";
+  color: black !important;
 }
 .offers-intro__breadcrumbs :last-child {
   color: #bead8e;
+}
+.offers-intro__breadcrumbs a {
+  text-decoration: none;
+  line-height: 2.5;
+  font-weight: 600;
+  cursor: pointer;
+}
+.offers-intro__breadcrumbs a:hover {
+  text-decoration: underline;
 }
 .offers-intro__cards {
   margin-top: 30px;
@@ -2400,7 +2448,7 @@ Common breakpoints:
   .offers-intro__offer-card-image {
     margin: 0 auto;
     max-width: 1170px;
-    border: 1px solid red;
+    height: 570px;
   }
 }
 .offers-intro__offer-card-image img {
@@ -2409,11 +2457,25 @@ Common breakpoints:
   height: 200px;
   opacity: 0.8;
 }
+@media (min-width: 1000px) {
+  .offers-intro__offer-card-image img {
+    height: 570px;
+  }
+}
 .offers-intro__offer-card-image-price-offer {
   margin-right: 20px;
   text-align: right;
   position: relative;
   bottom: 110px;
+}
+@media (min-width: 1000px) {
+  .offers-intro__offer-card-image-price-offer {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 40px;
+    z-index: 10;
+    bottom: 60px;
+  }
 }
 .offers-intro__lined-price span {
   text-decoration: line-through;
@@ -2421,6 +2483,11 @@ Common breakpoints:
   color: #bead8e;
   font-size: 25px;
   text-shadow: 1px 1px 9px black;
+}
+@media (min-width: 1000px) {
+  .offers-intro__lined-price span {
+    text-shadow: none;
+  }
 }
 .offers-intro__lined-price :last-child {
   font-size: 80%;
@@ -2430,16 +2497,47 @@ Common breakpoints:
   font-size: 35px;
   text-shadow: 1px 1px 9px black;
 }
+@media (min-width: 1000px) {
+  .offers-intro__red-price span {
+    text-shadow: none;
+  }
+}
 .offers-intro__red-price :last-child {
   font-size: 100%;
 }
 .offers-intro__offer-card-body {
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   padding: 20px;
-  margin-top: -90px;
+  margin-top: 20px;
+}
+@media (min-width: 1000px) {
+  .offers-intro__offer-card-body {
+    position: relative;
+    top: -60px;
+    border-top: 6px solid #bead8e;
+    background-color: #fff;
+    box-shadow: none;
+  }
+}
+@media (min-width: 1000px) and (min-width: 1000px) {
+  .offers-intro__offer-card-body {
+    padding: 40px;
+  }
+}
+@media (min-width: 1000px) {
+  .offers-intro__offer-card-body {
+    margin: 0 auto;
+    max-width: 1050px;
+  }
 }
 .offers-intro__offer-card-body h1 {
   margin-top: 20px;
+}
+@media (min-width: 1000px) {
+  .offers-intro__offer-card-body h1 {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #bdbdbd;
+  }
 }
 .offers-intro__offer-card-body p {
   margin-top: 20px;
@@ -2447,11 +2545,24 @@ Common breakpoints:
   line-height: 30px;
   color: #777777;
 }
+@media (min-width: 1000px) {
+  .offers-intro__offer-card-body p {
+    padding-top: 10px;
+    width: 55%;
+    float: left;
+  }
+}
 .offers-intro__offer-card-body-services {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+@media (min-width: 1000px) {
+  .offers-intro__offer-card-body-services {
+    width: 45%;
+    padding-left: 5%;
+  }
 }
 .offers-intro__offer-card-body-services img {
   object-fit: scale-down;
@@ -2479,6 +2590,11 @@ Common breakpoints:
 .offers-intro__button {
   margin-top: 40px;
 }
+@media (min-width: 1000px) {
+  .offers-intro__button {
+    margin-top: 20px;
+  }
+}
 
 .offers-popular {
   padding: 40px 20px 40px 20px;
@@ -2489,9 +2605,38 @@ Common breakpoints:
   color: #bead8e;
   font-weight: 300;
 }
+@media (min-width: 1000px) {
+  .offers-popular h4 {
+    color: #bdac8d;
+    font-family: Archivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+  }
+}
 .offers-popular h1 {
   color: #ffffff;
   padding: 10px 0 20px 0;
+}
+@media (min-width: 1000px) {
+  .offers-popular h1 {
+    color: #fff;
+    font-family: Old Standard TT;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -2.4px;
+    padding: 80px;
+  }
+}
+@media (min-width: 1000px) {
+  .offers-popular {
+    height: 885px;
+  }
 }
 .offers-popular__card {
   background-color: #ffffff;
@@ -2525,9 +2670,24 @@ Common breakpoints:
   font-weight: 700;
   color: #bdbdbd;
 }
+.offers-popular__text-second-span :hover {
+  color: #222222;
+}
+.offers-popular__text-second-span a {
+  text-decoration: none;
+  color: inherit;
+}
 
-.swiper-custom-buttons {
-  top: var(--swiper-navigation-top-offset, 25%) !important;
+@media (min-width: 1200px) {
+  .swiper-rooms-offer {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .swiper-custom-buttons {
+    scale: 1.6;
+  }
 }
 
 .contact-intro__head-section {
@@ -2574,9 +2734,19 @@ Common breakpoints:
 }
 .contact-intro__breadcrumbs :first-child {
   font-family: "Archivo";
+  color: black !important;
 }
 .contact-intro__breadcrumbs :last-child {
   color: #bead8e;
+}
+.contact-intro__breadcrumbs a {
+  text-decoration: none;
+  line-height: 2.5;
+  font-weight: 600;
+  cursor: pointer;
+}
+.contact-intro__breadcrumbs a:hover {
+  text-decoration: underline;
 }
 .contact-intro__cards {
   padding: 20px;
@@ -2738,9 +2908,19 @@ Common breakpoints:
 }
 .room-details-intro__breadcrumbs :first-child {
   font-family: "Archivo";
+  color: black !important;
 }
 .room-details-intro__breadcrumbs :last-child {
   color: #bead8e;
+}
+.room-details-intro__breadcrumbs a {
+  text-decoration: none;
+  line-height: 2.5;
+  font-weight: 600;
+  cursor: pointer;
+}
+.room-details-intro__breadcrumbs a:hover {
+  text-decoration: underline;
 }
 .room-details-intro__room-details {
   padding: 20px;
