@@ -2362,6 +2362,12 @@ Common breakpoints:
 }
 
 @media (min-width: 1000px) {
+  .room-image {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1000px) {
   .swiper-rooms-cards {
     max-width: 1170px;
   }
