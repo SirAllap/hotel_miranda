@@ -38,9 +38,19 @@
         letter-spacing: -0.5px;
         :first-child {
             font-family: $arch-font;
+            color: black !important;
         }
         :last-child {
             color: $color-beish;
+        }
+        a {
+            text-decoration: none;
+            line-height: 2.5;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
     &__cards {
@@ -54,13 +64,16 @@
         @include desktop {
             margin: 0 auto;
             max-width: 1170px;
-            border: 1px solid red;
+            height: 570px;
         }
         img {
             object-fit: cover;
             width: 100%;
             height: 200px;
             opacity: 0.8;
+            @include desktop {
+                height: 570px;
+            }
         }
     }
     &__offer-card-image-price-offer {
@@ -68,6 +81,13 @@
         text-align: right;
         position: relative;
         bottom: 110px;
+        @include desktop {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 40px;
+            z-index: 10;
+            bottom: 60px;
+        }
     }
     &__lined-price {
         span {
@@ -76,6 +96,9 @@
             color: $color-beish;
             font-size: 25px;
             text-shadow: 1px 1px 9px black;
+            @include desktop {
+                text-shadow: none;
+            }
         }
         :last-child {
             font-size: 80%;
@@ -86,26 +109,56 @@
             color: #de5777;
             font-size: 35px;
             text-shadow: 1px 1px 9px black;
+            @include desktop {
+                text-shadow: none;
+            }
         }
         :last-child {
             font-size: 100%;
         }
     }
     &__offer-card-body {
+        @include desktop {
+            position: relative;
+            top: -60px;
+            border-top: 6px solid $color-beish;
+            background-color: #fff;
+            box-shadow: none;
+            @include desktop {
+                padding: 40px;
+            }
+        }
         box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
         padding: 20px;
-        margin-top: -90px;
+        margin-top: 20px;
+        @include desktop {
+            margin: 0 auto;
+            max-width: 1050px;
+        }
         h1 {
             margin-top: 20px;
+            @include desktop {
+                padding-bottom: 30px;
+                border-bottom: 1px solid $color-verySoftGrey;
+            }
         }
         p {
             margin-top: 20px;
             text-align: justify;
             line-height: 30px;
             color: $color-softGreyText;
+            @include desktop {
+                padding-top: 10px;
+                width: 55%;
+                float: left;
+            }
         }
     }
     &__offer-card-body-services {
+        @include desktop {
+            width: 45%;
+            padding-left: 5%;
+        }
         margin-top: 20px;
         display: flex;
         flex-direction: row;
@@ -136,5 +189,8 @@
     }
     &__button {
         margin-top: 40px;
+        @include desktop {
+            margin-top: 20px;
+        }
     }
 }
