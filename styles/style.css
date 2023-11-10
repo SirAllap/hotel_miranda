@@ -2702,7 +2702,7 @@ Common breakpoints:
 .contact-intro__head-section h1 {
   margin-top: 20px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .contact-intro__head-section h1 {
     margin: 0 auto 0 auto;
     width: 1170px;
@@ -2712,7 +2712,7 @@ Common breakpoints:
   color: #ffffff;
   font-weight: 300;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .contact-intro__head-section h5 {
     margin: 0 auto 20px auto;
     width: 1170px;
@@ -2752,13 +2752,34 @@ Common breakpoints:
   padding: 20px;
   margin-top: 20px;
 }
+@media (min-width: 1000px) {
+  .contact-intro__cards {
+    padding: 50px 0 50px 0;
+  }
+}
 .contact-intro__cards h4 {
   margin-bottom: 30px;
   font-size: 24px;
+  width: 150px;
+}
+@media (min-width: 1200px) {
+  .contact-intro__cards h4 {
+    margin-right: 130px;
+    margin-bottom: 20px;
+  }
 }
 .contact-intro__cards p {
   color: #777777;
   width: 200px;
+}
+@media (min-width: 1200px) {
+  .contact-intro__cards {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+  }
 }
 .contact-intro__card1 {
   background: url("../../../assets/images/contact/01.png"), #ffffff;
@@ -2770,11 +2791,22 @@ Common breakpoints:
   flex-direction: row;
   align-items: center;
 }
+@media (min-width: 1200px) {
+  .contact-intro__card1 {
+    background-position-y: 80%;
+    background-position-x: 100%;
+  }
+}
 .contact-intro__card1 img {
   width: 40px;
   height: 40px;
   object-fit: contain;
   margin: 0 20px 0 40px;
+}
+@media (min-width: 1200px) {
+  .contact-intro__card1 img {
+    margin: 0 20px 80px 20px;
+  }
 }
 .contact-intro__card2 {
   background: url("../../../assets/images/contact/02.png"), #ffffff;
@@ -2786,11 +2818,22 @@ Common breakpoints:
   flex-direction: row;
   align-items: center;
 }
+@media (min-width: 1200px) {
+  .contact-intro__card2 {
+    background-position-y: 80%;
+    background-position-x: 100%;
+  }
+}
 .contact-intro__card2 img {
   width: 40px;
   height: 40px;
   object-fit: contain;
   margin: 0 20px 0 40px;
+}
+@media (min-width: 1200px) {
+  .contact-intro__card2 img {
+    margin: 0 20px 80px 20px;
+  }
 }
 .contact-intro__card3 {
   background: url("../../../assets/images/contact/03.png"), #ffffff;
@@ -2802,11 +2845,53 @@ Common breakpoints:
   flex-direction: row;
   align-items: center;
 }
+@media (min-width: 1200px) {
+  .contact-intro__card3 {
+    background-position-y: 80%;
+    background-position-x: 100%;
+  }
+}
 .contact-intro__card3 img {
   width: 40px;
   height: 40px;
   object-fit: contain;
   margin: 0 20px 0 40px;
+}
+@media (min-width: 1200px) {
+  .contact-intro__card3 img {
+    margin: 0 20px 80px 20px;
+  }
+}
+.contact-intro__gmap {
+  padding: 20px;
+}
+@media (min-width: 720px) {
+  .contact-intro__gmap {
+    max-width: 750px;
+    margin: auto;
+  }
+  .contact-intro__gmap iframe {
+    height: 300px;
+  }
+}
+@media (min-width: 1000px) {
+  .contact-intro__gmap {
+    padding: 0px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .contact-intro__gmap iframe {
+    height: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-intro__gmap {
+    max-width: 1170px;
+    margin: auto;
+  }
+  .contact-intro__gmap iframe {
+    height: 700px;
+  }
 }
 .contact-intro__form {
   margin-top: 20px;
@@ -2823,6 +2908,12 @@ Common breakpoints:
   border: none;
   background-color: #f8f8f8;
 }
+@media (min-width: 1200px) {
+  .contact-intro__form input {
+    display: inline;
+    max-width: 49.8%;
+  }
+}
 .contact-intro__form textarea {
   padding: 20px 0 0 50px;
   font-family: "Roboto";
@@ -2838,10 +2929,27 @@ Common breakpoints:
   margin-bottom: 30px;
   border: none;
 }
+@media (min-width: 1200px) {
+  .contact-intro__form textarea {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
 .contact-intro__form button {
   margin: auto;
   margin-bottom: 50px;
   width: 265px;
+}
+@media (min-width: 1200px) {
+  .contact-intro__form button {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-intro__form-wrapper {
+    max-width: 1170px;
+    margin: 0 auto 0 auto;
+  }
 }
 
 #input-name {
