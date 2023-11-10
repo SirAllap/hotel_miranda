@@ -1,4 +1,8 @@
 .room-details-cards {
+    @include xl {
+        width: 1170px;
+        margin: 0 auto;
+    }
     margin-bottom: 40px;
     text-align: center;
     padding: 20px;
