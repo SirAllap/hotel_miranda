@@ -39,9 +39,19 @@
         letter-spacing: -0.5px;
         :first-child {
             font-family: $arch-font;
+            color: black !important;
         }
         :last-child {
             color: $color-beish;
+        }
+        a {
+            text-decoration: none;
+            line-height: 2.5;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
     &__video-services {

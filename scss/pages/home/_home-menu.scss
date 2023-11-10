@@ -98,7 +98,17 @@
             margin: 0 auto;
         }
     }
-    &__acheivements {
+    &__slider-button-prev {
+        top: var(--swiper-navigation-top-offset, 90%) !important;
+        left: var(--swiper-navigation-sides-offset, 70%) !important;
+    }
+    &__slider-button-next {
+        top: var(--swiper-navigation-top-offset, 90%) !important;
+    }
+}
+
+.acheivements {
+    &__acheivements-container {
         margin-top: 50px;
         background-color: $color-strongerGreyBack;
         color: $color-softGreyText1;
@@ -111,7 +121,7 @@
         @include md {
             height: 348px;
             padding: 0;
-            margin: 0;
+            margin: 0 0 70px 0;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -154,12 +164,5 @@
             padding: 0;
             margin: 0;
         }
-    }
-    &__slider-button-prev {
-        top: var(--swiper-navigation-top-offset, 90%) !important;
-        left: var(--swiper-navigation-sides-offset, 70%) !important;
-    }
-    &__slider-button-next {
-        top: var(--swiper-navigation-top-offset, 90%) !important;
     }
 }
