@@ -877,8 +877,29 @@ Common breakpoints:
 }
 
 .home-intro {
+  position: relative;
   margin-bottom: 60px;
-  background-color: #333333;
+  background-color: #111111;
+  z-index: 1;
+}
+.home-intro__background-landscape {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../../assets/header-img/pexels-sidhaya-khanna-2445551.jpg) no-repeat center;
+  background-size: cover;
+  opacity: 0.7;
+}
+@media (min-width: 1000px) {
+  .home-intro__background-landscape {
+    background: url(../../../assets/header-img/Aerial-View-Water-Theme-Park.jpg) no-repeat top;
+    background-size: cover;
+    opacity: 0.7;
+    transition: 0.3s all;
+    filter: blur(4px);
+  }
 }
 .home-intro__text {
   width: 100%;
@@ -1049,7 +1070,7 @@ Common breakpoints:
 }
 .home-intro__calendar-picker {
   min-width: 100%;
-  background-color: #111111;
+  background-color: #222222;
 }
 .home-intro__calendar-picker-inner {
   display: flex;
@@ -1133,7 +1154,7 @@ Common breakpoints:
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 400;
-  background-color: #111111;
+  background-color: #222222;
   font-size: 20px;
   color-scheme: dark;
   border: 0;
