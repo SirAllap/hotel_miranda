@@ -6,8 +6,8 @@
 	"devDependencies": {},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"deploy": "aws s3 sync build/ s3://hotelmiranda --delete --profile sirallap",
-		"build": "rm -rf build && mkdir -p build && cp -r index.html aboutUs.html contact.html offers.html room-details.html rooms.html styles index.js assets build"
+		"deploy": "npm run build && aws s3 sync build/ s3://hotelmiranda --delete --profile sirallap",
+		"build": "rm -rf build && mkdir -p build && cp -r index.html aboutUs.html contact.html offers.html room-details.html rooms.html styles index.js assets favico.ico build"
 	},
 	"keywords": [],
 	"author": "",
